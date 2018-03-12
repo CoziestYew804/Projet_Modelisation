@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ProjetSFML-Pacman"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetSFML-Pacman">
+				<Option output="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/ProjetSFML-Pacman" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetSFML-Pacman"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetSFML-Pacman/fast">
+				<Option output="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/ProjetSFML-Pacman" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetSFML-Pacman/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Erreur.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AElement.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AElement.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AStar.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/Arete.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/GElement.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/Graphe.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/InfoAStar.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/InfoAStar.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/OutilsCarte.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/OutilsCarte.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/PElement.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/Sommet.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VArete.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VArete.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VSommet.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VSommet.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Partie.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Partie.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Animation.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Animation.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Fantome.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Fantome.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Pacman.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Pacman.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Personnage.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Personnage.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/deplacement.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/deplacement.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/AlgebreLineaire.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreGrapheSFML.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreGrapheSFML.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreSFML.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/Matrice22.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/Reels.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/TransfoAffine2D.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/Vecteur2D.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/backgroundRender.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/Thing.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/Thing.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/board.h">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/main.cpp">
+			<Option target="ProjetSFML-Pacman"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

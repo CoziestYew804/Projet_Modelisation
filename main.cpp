@@ -12,16 +12,18 @@ using namespace sf;
 
 int main()
 {
-    Vecteur2D coinBG(0, -15);
-    Vecteur2D coinHD(0, 100);
+
     board B;
-    FenetreGrapheSFML window("PacmanSFML !", coinBG, coinHD, 1280,720);
+    Vecteur2D coinBG(-2,B.coordMax.second);
+    Vecteur2D coinHD(B.coordMax.first,-2);
+    FenetreGrapheSFML window("Graphe !", coinBG, coinHD, 1920,1080);
 
 
 
     B.graphe.dessine(window);
     //window.fenetre.draw(gameOver);
     window.fenetre.display();
+
     while (window.fenetre.isOpen())
     {
         // on inspecte tous les évènements de la fenêtre qui ont été émis depuis la précédente itération
@@ -32,6 +34,7 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.fenetre.close();
         }
+
     }
 
 

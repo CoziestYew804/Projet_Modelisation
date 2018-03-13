@@ -38,33 +38,17 @@ vSommet : en coordonn�es monde
 inline bool dessineSommet (RenderWindow &fenetre, const TransfoAffine2D &t, const VSommet &vSommet)
 {
     Vecteur2D position = t.applique(vSommet.getPosition());
-    Vecteur2D position1 = position - 30 * Vecteur2D(1, 1);
+    Vecteur2D position1 = position - 3 * Vecteur2D(1, 1);
 
-    CircleShape disque((float) 30);
+    CircleShape disque((float) 3);
     disque.setFillColor(Color::Black);
     //float epaisseurBord = (0.15f * 30.0f);
-    disque.setOutlineThickness(8);
+    disque.setOutlineThickness(10);
     disque.setOutlineColor(Color::Cyan);
 
     Vector2f p1 = vecteur2DToVector2f(position1);
     disque.setPosition(p1);
     fenetre.draw(disque);
-
-    if (vSommet.isGom())
-    {
-        sf::Image img;
-        img.loadFromFile("imgpacman/superpellet.png");
-        img.createMaskFromColor(Color::Black);
-        sf::Texture texture;
-        if (!texture.loadFromImage(img))
-        {
-            Erreur("Chargement pellet");
-        }
-        sf::Sprite sprite;
-        sprite.setTexture(texture);
-        sprite.setPosition(vecteur2DToVector2f(position - 6 * Vecteur2D(1, 1)));
-        fenetre.draw(sprite);
-    }
 
     return true;
 }
@@ -87,7 +71,7 @@ inline bool dessineArete (RenderWindow &fenetre, const TransfoAffine2D &t, const
     Vecteur2D n = u.rotationDirecteQuartDeTour();
 
     //double e = 1;	// �paisseur du rectangle = 2*e. longueur du rectangle == AB
-    double e = 10;    // �paisseur du rectangle = 2*e. longueur du rectangle == AB
+    double e = 1;    // �paisseur du rectangle = 2*e. longueur du rectangle == AB
 
     Vecteur2D v = e * n;
 

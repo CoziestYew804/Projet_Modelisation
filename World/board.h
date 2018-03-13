@@ -22,7 +22,7 @@ class board
 {
 public:
     Graphe<VArete, VSommet> graphe;
-    map<string, int> listeSommet;
+    map<string, Sommet<VSommet>*> listeSommet;
     vector<Sommet<VSommet> *> sommets;
     vector<Arete<VArete, VSommet> *> aretes;
     std::vector<std::vector<std::pair <  int, int>>> graph = std::vector<std::vector<std::pair < int, int>>> (24);
@@ -31,23 +31,20 @@ public:
 
     board()
     {
-        /*for (unsigned int i = 0; i < 25; i++)
-        {
-            sommets.push_back(graphe.creeSommet(VSommet(Vecteur2D(i / 5, i % 5))));
-        }*/
-
-        ifstream fichier("Graphe files/data_VRPTW_10_3_2_4.gpr", ios::in);  // on ouvre en lecture
-
+        string input = "";
+        cout << "veuillez ecrire le nom du fichier a ouvrir:\n>";
+        getline(cin, input);
+        ifstream fichier("Graphe files/"+input, ios::in);  // on ouvre en lecture
+        std::pair <  int, int> pSommet;
+        std::pair <  int, int> pArcs;
         if (fichier)  // si l'ouverture a fonctionné
         {
             string line;
             int numeroSommet = 0;
             int ligne=1;
+            //bool pSommet;
             while (getline(fichier, line))  // tant que l'on peut mettre la ligne dans "contenu"
             {
-
-                if ((ligne>5)&&(ligne < 16)) {
-
                         int len = line.length();
                         vector<string> subArray;
 
@@ -62,28 +59,36 @@ public:
                                 subArray.push_back(ch);
                             }
 
+
                         }
-                        //cout<<subArray.size()<<endl;
-                        cout << "taille ligne "<< ligne << " vediamo : " << subArray.size()<< endl;
-                        cout<<stoi(subArray[2])<<" , " << subArray[4]<<endl;
-                        sommets.push_back(graphe.creeSommet(VSommet(Vecteur2D(stoi(subArray[2]), stoi(subArray[4])))));
-                        //cout << stoi(subArray[subArray.size()-1]);
+                if(subArray.size()>0) {
+                    if (!subArray[0].compare("sectionSommets")) {
+                        pSommet.first = ligne;
+                        cout << subArray[0] << endl;
+                    }
+                    if (!subArray[0].compare("sources")) {
+                        pSommet.second = ligne - 2;
+                        cout<<subArray[0]<<endl;
+
+                    }
+
+                    if (!subArray[0].compare("sectionArcs")) {
+                        pArcs.first = ligne + 1;
+                        cout <<  "arc debut"<< subArray[0] << endl;
+                        cout<< ligne<<endl;
+                    }
+                    if (!subArray[0].compare("sectionGraphes")) {
+                        pArcs.second = ligne - 2;
+                        cout << "arc final"<< subArray[0] << endl;
+                        cout<< ligne<<endl;
+                    }
+                }
 
 
-                    } ligne++;
+                     ligne++;
 
 
             }
-
-                /*for (int i = 0; i < subArray.size(); i = i + 2) {
-                    //graph[numeroSommet].push_back(make_pair(stoi(subArray[i]),stoi(subArray[i+1])));
-                    sommets.push_back(graphe.creeSommet(VSommet(Vecteur2D(i / 5, i % 5))));
-
-                }*/
-
-                //numeroSommet++;
-
-                //cout<<line<<endl;
 
 
             fichier.close();
@@ -92,13 +97,8 @@ public:
         }
 
 
-        /*for(int i=0; i<24; i++){
-            for(int j=0; j<graph[i].size(); j++) {
-                aretes.push_back(graphe.creeArete(graph[i][j].first, sommets[i], sommets[graph[i][j].second]));
-            }
-        }*/
-
-
+        ExtractionSommet(pSommet,input);
+        ExtractionArc(pArcs,input);
 
 
     }
@@ -106,41 +106,104 @@ public:
     virtual ~board ()
     = default;
 
-    void refroiditToutesAretes()
-    {
-        for(unsigned int i = 0; i < aretes.size(); i++)
+    void ExtractionSommet( pair<int,int>  pSommet, string input ) {
+
+        ifstream fichier("Graphe files/" + input, ios::in);
+
+        string line;
+        int ligne = 0;
+        if (fichier)  // si l'ouverture a fonctionné
         {
-            aretes[i]->v.operator--();
+            while (getline(fichier, line))  // tant que l'on peut mettre la ligne dans "contenu"
+            {
+
+                int len = line.length();
+                vector<string> subArray;
+                if (ligne >= pSommet.first && ligne < pSommet.second) {
+
+
+                    for (int j = 0, k = 0; j < len; j++) {
+                        if (line[j] == ' ') {
+                            string ch = line.substr(k, j - k);
+                            k = j + 1;
+                            subArray.push_back(ch);
+                        }
+                        if (j == len - 1) {
+                            string ch = line.substr(k, j - k + 1);
+                            subArray.push_back(ch);
+                        }
+
+                    }
+
+
+                    //cout<<subArray.size()<<endl;
+                    //cout << "taille ligne "<< ligne << " vediamo : " << subArray.size()<< endl;
+                    cout << stoi(subArray[2]) << " , " << subArray[4] << endl;
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(stoi(subArray[2]), stoi(subArray[4]))));
+                    sommets.push_back(listeSommet[subArray[0]]);
+                    //cout << stoi(subArray[subArray.size()-1]);
+                }
+
+                ligne++;
+
+
+            }
+
+
+            fichier.close();
+        } else {
+            cerr << "Impossible d'ouvrir le fichier !" << endl;
         }
+
     }
-
-    bool aMangayTouteGommes() const
-    {
-        for (Sommet<VSommet> * s: sommets)
+    void ExtractionArc( pair<int,int>  pArcs, string input ) {
+        cout<<"je suis dans extraction arcs"<<endl;
+        ifstream fichier("Graphe files/" + input, ios::in);
+        string line;
+        int ligne = 0;
+        cout<<pArcs.first<< ","<< pArcs.second<<endl;
+        if (fichier)  // si l'ouverture a fonctionné
         {
-            if (s->v.isGom()) return false;
-        }
-        return true;
-    }
+            while (getline(fichier, line))  // tant que l'on peut mettre la ligne dans "contenu"
+            {
 
-    void reinitialiserGommes()
-    {
-        for (Sommet<VSommet> * s: sommets)
-        {
-            s->v.setGom(true);
-        }
-    }
+                int len = line.length();
+                vector<string> subArray;
 
-    void incrementScore()
-    {
-        score = (score / 2500) * 2500;
-        if(score == 1)
-            score = 0;
+                if (ligne >= pArcs.first && ligne < pArcs.second) {
+                    cout << "oui c est bon"<<endl;
+                    for (int j = 0, k = 0; j < len; j++) {
+                        if (line[j] == ' ') {
+                            string ch = line.substr(k, j - k);
+                            k = j + 1;
+                            subArray.push_back(ch);
+                        }
+                        if (j == len - 1) {
+                            string ch = line.substr(k, j - k + 1);
+                            subArray.push_back(ch);
+                        }
 
-        for (Sommet<VSommet> * s: sommets)
-        {
-            score+=100 * (!s->v.isGom());
+                    }
+
+                    cout << (subArray[2]) << " , " << subArray[4] << endl;
+                    aretes.push_back(graphe.creeArete(-2, listeSommet[subArray[2]], listeSommet[subArray[4]]));
+
+                }
+
+                ligne++;
+
+
+            }
+
+
+
+            fichier.close();
+
+        } else {
+
+            cerr << "Impossible d'ouvrir le fichier !" << endl;
         }
+
     }
 
 

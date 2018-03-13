@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman
+# Install script for directory: /Users/aminuniversita/CLionProjects/Projet_Modelisation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

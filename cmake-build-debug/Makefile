@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman
+CMAKE_SOURCE_DIR = /Users/aminuniversita/CLionProjects/Projet_Modelisation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -258,168 +258,6 @@ Graphe/VSommet.cpp.s:
 	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.s
 .PHONY : Graphe/VSommet.cpp.s
 
-Partie.o: Partie.cpp.o
-
-.PHONY : Partie.o
-
-# target to build an object file
-Partie.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o
-.PHONY : Partie.cpp.o
-
-Partie.i: Partie.cpp.i
-
-.PHONY : Partie.i
-
-# target to preprocess a source file
-Partie.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.i
-.PHONY : Partie.cpp.i
-
-Partie.s: Partie.cpp.s
-
-.PHONY : Partie.s
-
-# target to generate assembly for a file
-Partie.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.s
-.PHONY : Partie.cpp.s
-
-Persos/Animation.o: Persos/Animation.cpp.o
-
-.PHONY : Persos/Animation.o
-
-# target to build an object file
-Persos/Animation.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o
-.PHONY : Persos/Animation.cpp.o
-
-Persos/Animation.i: Persos/Animation.cpp.i
-
-.PHONY : Persos/Animation.i
-
-# target to preprocess a source file
-Persos/Animation.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.i
-.PHONY : Persos/Animation.cpp.i
-
-Persos/Animation.s: Persos/Animation.cpp.s
-
-.PHONY : Persos/Animation.s
-
-# target to generate assembly for a file
-Persos/Animation.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.s
-.PHONY : Persos/Animation.cpp.s
-
-Persos/Fantome.o: Persos/Fantome.cpp.o
-
-.PHONY : Persos/Fantome.o
-
-# target to build an object file
-Persos/Fantome.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o
-.PHONY : Persos/Fantome.cpp.o
-
-Persos/Fantome.i: Persos/Fantome.cpp.i
-
-.PHONY : Persos/Fantome.i
-
-# target to preprocess a source file
-Persos/Fantome.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.i
-.PHONY : Persos/Fantome.cpp.i
-
-Persos/Fantome.s: Persos/Fantome.cpp.s
-
-.PHONY : Persos/Fantome.s
-
-# target to generate assembly for a file
-Persos/Fantome.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.s
-.PHONY : Persos/Fantome.cpp.s
-
-Persos/Pacman.o: Persos/Pacman.cpp.o
-
-.PHONY : Persos/Pacman.o
-
-# target to build an object file
-Persos/Pacman.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o
-.PHONY : Persos/Pacman.cpp.o
-
-Persos/Pacman.i: Persos/Pacman.cpp.i
-
-.PHONY : Persos/Pacman.i
-
-# target to preprocess a source file
-Persos/Pacman.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.i
-.PHONY : Persos/Pacman.cpp.i
-
-Persos/Pacman.s: Persos/Pacman.cpp.s
-
-.PHONY : Persos/Pacman.s
-
-# target to generate assembly for a file
-Persos/Pacman.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.s
-.PHONY : Persos/Pacman.cpp.s
-
-Persos/Personnage.o: Persos/Personnage.cpp.o
-
-.PHONY : Persos/Personnage.o
-
-# target to build an object file
-Persos/Personnage.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o
-.PHONY : Persos/Personnage.cpp.o
-
-Persos/Personnage.i: Persos/Personnage.cpp.i
-
-.PHONY : Persos/Personnage.i
-
-# target to preprocess a source file
-Persos/Personnage.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.i
-.PHONY : Persos/Personnage.cpp.i
-
-Persos/Personnage.s: Persos/Personnage.cpp.s
-
-.PHONY : Persos/Personnage.s
-
-# target to generate assembly for a file
-Persos/Personnage.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.s
-.PHONY : Persos/Personnage.cpp.s
-
-Persos/deplacement.o: Persos/deplacement.cpp.o
-
-.PHONY : Persos/deplacement.o
-
-# target to build an object file
-Persos/deplacement.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o
-.PHONY : Persos/deplacement.cpp.o
-
-Persos/deplacement.i: Persos/deplacement.cpp.i
-
-.PHONY : Persos/deplacement.i
-
-# target to preprocess a source file
-Persos/deplacement.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.i
-.PHONY : Persos/deplacement.cpp.i
-
-Persos/deplacement.s: Persos/deplacement.cpp.s
-
-.PHONY : Persos/deplacement.s
-
-# target to generate assembly for a file
-Persos/deplacement.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.s
-.PHONY : Persos/deplacement.cpp.s
-
 Screen/FenetreGrapheSFML.o: Screen/FenetreGrapheSFML.cpp.o
 
 .PHONY : Screen/FenetreGrapheSFML.o
@@ -525,24 +363,6 @@ help:
 	@echo "... Graphe/VSommet.o"
 	@echo "... Graphe/VSommet.i"
 	@echo "... Graphe/VSommet.s"
-	@echo "... Partie.o"
-	@echo "... Partie.i"
-	@echo "... Partie.s"
-	@echo "... Persos/Animation.o"
-	@echo "... Persos/Animation.i"
-	@echo "... Persos/Animation.s"
-	@echo "... Persos/Fantome.o"
-	@echo "... Persos/Fantome.i"
-	@echo "... Persos/Fantome.s"
-	@echo "... Persos/Pacman.o"
-	@echo "... Persos/Pacman.i"
-	@echo "... Persos/Pacman.s"
-	@echo "... Persos/Personnage.o"
-	@echo "... Persos/Personnage.i"
-	@echo "... Persos/Personnage.s"
-	@echo "... Persos/deplacement.o"
-	@echo "... Persos/deplacement.i"
-	@echo "... Persos/deplacement.s"
 	@echo "... Screen/FenetreGrapheSFML.o"
 	@echo "... Screen/FenetreGrapheSFML.i"
 	@echo "... Screen/FenetreGrapheSFML.s"

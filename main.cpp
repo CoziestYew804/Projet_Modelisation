@@ -1,9 +1,9 @@
 ﻿
 #include <iostream>
 #include "Graphe/Graphe.h"
-#include "Persos/Pacman.h"
-#include "Persos/Fantome.h"
-
+#include "Screen/Vecteur2D.h"
+#include "World/board.h"
+#include "Screen/FenetreGrapheSFML.h"
 
 
 using namespace std;

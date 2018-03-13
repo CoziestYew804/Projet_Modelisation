@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman
+CMAKE_SOURCE_DIR = /Users/aminuniversita/CLionProjects/Projet_Modelisation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProjetSFML-Pacman.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/main.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/main.cpp > CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/main.cpp > CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/main.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/main.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o.provides.build: CMakeFiles/ProjetSFM
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o: ../Graphe/AElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AElement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AElement.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/AElement.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/AElement.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o: ../Graphe/InfoAStar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/InfoAStar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/InfoAStar.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/InfoAStar.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o: ../Graphe/OutilsCarte.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/OutilsCarte.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/OutilsCarte.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/OutilsCarte.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o: ../Graphe/VArete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VArete.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VArete.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VArete.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o: ../Graphe/VSommet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VSommet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VSommet.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Graphe/VSommet.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o.requires:
 
@@ -201,90 +201,18 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o.provides: CMakeFiles/Proje
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o
 
 
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o: ../Persos/deplacement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/deplacement.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/deplacement.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/deplacement.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o
-
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o: ../Persos/Animation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Animation.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Animation.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Animation.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o
-
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o: ../Partie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Partie.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Partie.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Partie.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o
-
-
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../World/Thing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/Thing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/Thing.cpp > CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.cpp > CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/World/Thing.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o.requires:
 
@@ -297,90 +225,18 @@ CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o.provides: CMakeFiles/ProjetSF
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o
 
 
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o: ../Persos/Personnage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Personnage.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Personnage.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Personnage.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o
-
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o: ../Persos/Pacman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Pacman.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Pacman.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Pacman.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o
-
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o: ../Persos/Fantome.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Fantome.cpp
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Fantome.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.i
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Persos/Fantome.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.s
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.requires:
-
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.requires
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.provides: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ProjetSFML-Pacman.dir/build.make CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.provides.build
-.PHONY : CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.provides
-
-CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.provides.build: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o
-
-
 CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o: CMakeFiles/ProjetSFML-Pacman.dir/flags.make
 CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o: ../Screen/FenetreGrapheSFML.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o -c /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreGrapheSFML.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o -c /Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.cpp
 
 CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreGrapheSFML.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.cpp > CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.i
 
 CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/Screen/FenetreGrapheSFML.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.cpp -o CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.s
 
 CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o.requires:
 
@@ -401,13 +257,7 @@ ProjetSFML__Pacman_OBJECTS = \
 "CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o" \
 "CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o" \
 "CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o" \
 "CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o" \
-"CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o" \
 "CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o"
 
 # External object files for target ProjetSFML-Pacman
@@ -419,17 +269,11 @@ ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o
-ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/build.make
 ProjetSFML-Pacman: CMakeFiles/ProjetSFML-Pacman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ProjetSFML-Pacman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ProjetSFML-Pacman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProjetSFML-Pacman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -443,13 +287,7 @@ CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Grap
 CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o.requires
 CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VArete.cpp.o.requires
 CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Graphe/VSommet.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Persos/deplacement.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Animation.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Partie.cpp.o.requires
 CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Personnage.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Pacman.cpp.o.requires
-CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Persos/Fantome.cpp.o.requires
 CMakeFiles/ProjetSFML-Pacman.dir/requires: CMakeFiles/ProjetSFML-Pacman.dir/Screen/FenetreGrapheSFML.cpp.o.requires
 
 .PHONY : CMakeFiles/ProjetSFML-Pacman.dir/requires
@@ -459,6 +297,6 @@ CMakeFiles/ProjetSFML-Pacman.dir/clean:
 .PHONY : CMakeFiles/ProjetSFML-Pacman.dir/clean
 
 CMakeFiles/ProjetSFML-Pacman.dir/depend:
-	cd /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug /Users/aminuniversita/CLionProjects/ProjetSFML-Pacman/cmake-build-debug/CMakeFiles/ProjetSFML-Pacman.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/aminuniversita/CLionProjects/Projet_Modelisation /Users/aminuniversita/CLionProjects/Projet_Modelisation /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug /Users/aminuniversita/CLionProjects/Projet_Modelisation/cmake-build-debug/CMakeFiles/ProjetSFML-Pacman.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ProjetSFML-Pacman.dir/depend
 

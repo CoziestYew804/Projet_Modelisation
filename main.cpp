@@ -14,8 +14,10 @@ int main()
 {
 
     board B;
-    Vecteur2D coinBG(-2,B.coordMax.second);
-    Vecteur2D coinHD(B.coordMax.first,-2);
+    //Vecteur2D coinBG(-2,B.coordMax.second);
+    //Vecteur2D coinHD(B.coordMax.first,-2);
+    Vecteur2D coinBG(-1, -1);
+    Vecteur2D coinHD(5, 5);
     FenetreGrapheSFML window("Graphe !", coinBG, coinHD, 1920,1080);
 
 

@@ -49,7 +49,7 @@ public:
                         vector<string> subArray;
 
                         for (int j = 0, k = 0; j < len; j++) {
-                            if (line[j] == ' ') {
+                            if (line[j] ==' ') {
                                 string ch = line.substr(k, j - k);
                                 k = j + 1;
                                 subArray.push_back(ch);
@@ -125,7 +125,7 @@ public:
 
 
                     for (int j = 0, k = 0; j < len; j++) {
-                        if (line[j] == ' ') {
+                        if (line[j] ==' ') {
                             string ch = line.substr(k, j - k);
                             k = j + 1;
                             subArray.push_back(ch);
@@ -140,12 +140,15 @@ public:
 
                     //cout<<subArray.size()<<endl;
                     //cout << "taille ligne "<< ligne << " vediamo : " << subArray.size()<< endl;
-                    cout << stoi(subArray[2]) << " , " << subArray[4] << endl;
-                    tempX=stoi(subArray[2]);
-                    tempY=stoi(subArray[4]);
-                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(tempX,tempY)));
+                    //cout << stoi(subArray[2]) << " , " << subArray[4] << endl;
+                    //tempX=stoi(subArray[2]);
+                    //tempY=stoi(subArray[4]);
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(ligne/-5, ligne%-5)));
                     sommets.push_back(listeSommet[subArray[0]]);
-                    if ( coordMax.first< tempX){
+
+
+
+                    /*if ( coordMax.first< tempX){
 
                         coordMax.first= tempX;
                     }
@@ -153,7 +156,7 @@ public:
 
                         coordMax.second= tempY;
                     }
-                    //cout << stoi(subArray[subArray.size()-1]);
+                    //cout << stoi(subArray[subArray.size()-1]);*/
                 }
 
                 ligne++;
@@ -199,6 +202,7 @@ public:
 
                     cout << (subArray[2]) << " , " << subArray[4] << endl;
                     aretes.push_back(graphe.creeArete(0, listeSommet[subArray[2]], listeSommet[subArray[4]]));
+
                 }
 
                 ligne++;

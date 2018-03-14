@@ -25,7 +25,8 @@ public:
     map<string, Sommet<VSommet>*> listeSommet; // map qui contient les sommet par leur nom
     vector<Sommet<VSommet> *> sommets;
     vector<Arete<VArete, VSommet> *> aretes;
-    pair<int,int> coordMax = make_pair(0,0);
+    int fichierLignes=1;
+    std::pair <  int, int> pSommet;
 
     int score;
 
@@ -35,14 +36,13 @@ public:
         cout << "veuillez ecrire le nom du fichier a ouvrir:\n>";
         getline(cin, input);
         ifstream fichier("Graphe files/"+input+".gpr", ios::in);  // on ouvre en lecture
-        std::pair <  int, int> pSommet;
         std::pair <  int, int> pArcs;
 
         if (fichier)  // si l'ouverture a fonctionné
         {
             string line;//contient une ligne du fichier
             int numeroSommet = 0;
-            int ligne=1;
+
             while (getline(fichier, line))  // tant que l'on peut mettre la ligne dans "contenu"
             {
                         int len = line.length();
@@ -64,27 +64,27 @@ public:
                 if(subArray.size()>0)
                 {
                     if (!subArray[0].compare("sectionSommets")) {
-                        pSommet.first = ligne;
+                        pSommet.first = fichierLignes;
                         cout << subArray[0] << endl;
                     }
                     if (!subArray[0].compare("sources")) {
-                        pSommet.second = ligne - 2;
+                        pSommet.second = fichierLignes - 2;
                         cout<<subArray[0]<<endl;
                     }
 
                     if (!subArray[0].compare("sectionArcs")) {
-                        pArcs.first = ligne + 1;
+                        pArcs.first = fichierLignes + 1;
                         cout <<  "arc debut"<< subArray[0] << endl;
-                        cout<< ligne<<endl;
+                        cout<< fichierLignes<<endl;
                     }
                     if (!subArray[0].compare("sectionGraphes")) {
-                        pArcs.second = ligne - 2;
+                        pArcs.second = fichierLignes - 2;
                         cout << "arc final"<< subArray[0] << endl;
-                        cout<< ligne<<endl;
+                        cout<< fichierLignes<<endl;
                     }
                 }
 
-                     ligne++;
+                fichierLignes++;
 
 
             }
@@ -137,26 +137,11 @@ public:
 
                     }
 
+                    int max=(pSommet.first-ligne)*-1;
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5)));
 
-                    //cout<<subArray.size()<<endl;
-                    //cout << "taille ligne "<< ligne << " vediamo : " << subArray.size()<< endl;
-                    //cout << stoi(subArray[2]) << " , " << subArray[4] << endl;
-                    //tempX=stoi(subArray[2]);
-                    //tempY=stoi(subArray[4]);
-                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(ligne/-5, ligne%-5)));
                     sommets.push_back(listeSommet[subArray[0]]);
 
-
-
-                    /*if ( coordMax.first< tempX){
-
-                        coordMax.first= tempX;
-                    }
-                    if ( coordMax.second< tempY){
-
-                        coordMax.second= tempY;
-                    }
-                    //cout << stoi(subArray[subArray.size()-1]);*/
                 }
 
                 ligne++;
@@ -172,7 +157,6 @@ public:
 
     }
     void ExtractionArc( pair<int,int>  pArcs, string input ) {
-        cout<<"je suis dans extraction arcs"<<endl;
         ifstream fichier("Graphe files/" + input+".gpr", ios::in);
         string line;
         int ligne = 0;
@@ -186,7 +170,6 @@ public:
                 vector<string> subArray;
 
                 if (ligne >= pArcs.first && ligne < pArcs.second) {
-                    cout << "oui c est bon"<<endl;
                     for (int j = 0, k = 0; j < len; j++) {
                         if (line[j] == ' ') {
                             string ch = line.substr(k, j - k);
@@ -200,7 +183,6 @@ public:
 
                     }
 
-                    cout << (subArray[2]) << " , " << subArray[4] << endl;
                     aretes.push_back(graphe.creeArete(0, listeSommet[subArray[2]], listeSommet[subArray[4]]));
 
                 }

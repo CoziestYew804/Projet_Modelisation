@@ -73,6 +73,7 @@ double & g( Sommet<VSommet> * sommet);
 bool estFinal(const Sommet<VSommet> * sommet);
 
 
+
 /**
 compte le nombre de maillons de la liste chaînée "pere" dont le maillon de tête est "tête".
 */

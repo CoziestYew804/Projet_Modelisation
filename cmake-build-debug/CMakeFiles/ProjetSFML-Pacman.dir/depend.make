@@ -8,6 +8,10 @@ CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o: ../Graphe/AElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o: ../Graphe/InfoAStar.cpp
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAStar.cpp.o: ../Graphe/InfoAStar.h
 
+CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAlgos.cpp.o: ../Graphe/AElement.h
+CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAlgos.cpp.o: ../Graphe/InfoAlgos.cpp
+CMakeFiles/ProjetSFML-Pacman.dir/Graphe/InfoAlgos.cpp.o: ../Graphe/InfoAlgos.h
+
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o: ../Erreur.h
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o: ../Graphe/AElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/Graphe/OutilsCarte.cpp.o: ../Graphe/Arete.h
@@ -58,6 +62,7 @@ CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/Arete.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/GElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/Graphe.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/InfoAStar.h
+CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/OutilsCarte.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/PElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/Sommet.h
 CMakeFiles/ProjetSFML-Pacman.dir/World/Thing.cpp.o: ../Graphe/VArete.h
@@ -78,6 +83,7 @@ CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/Arete.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/GElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/Graphe.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/InfoAStar.h
+CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/OutilsCarte.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/PElement.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/Sommet.h
 CMakeFiles/ProjetSFML-Pacman.dir/main.cpp.o: ../Graphe/VArete.h

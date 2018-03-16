@@ -15,10 +15,9 @@ class VSommet
 public:
     InfoAStar infoAStar;
 private:
-    bool Perso, Gom;
     Vecteur2D position;
 public:
-    explicit VSommet (Vecteur2D position, bool Perso = false, bool Gom = true,
+    explicit VSommet (Vecteur2D position, bool marked,
                       const InfoAStar &infoAStar = InfoAStar());
     virtual ~VSommet ();
     VSommet (const VSommet &vs);
@@ -27,10 +26,6 @@ public:
 
     friend ostream &operator<< (ostream &o, const VSommet &vs);
 
-    inline bool isPerso () const;
-    inline void setPerso (bool Perso);
-    inline bool isGom () const;
-    inline void setGom (bool Gom);
     inline InfoAStar &getInfoAStar ();
     inline void setInfoAStar (const InfoAStar &infoAStar);
 
@@ -38,27 +33,11 @@ public:
 
     inline void setPosition (const Vecteur2D &position);
 
+    inline void switchMarked();
+
+    inline bool isMarked() const;
+
 };
-
-inline bool VSommet::isPerso () const
-{
-    return Perso;
-}
-
-inline void VSommet::setPerso (bool Perso)
-{
-    VSommet::Perso = Perso;
-}
-
-inline bool VSommet::isGom () const
-{
-    return Gom;
-}
-
-inline void VSommet::setGom (bool Gom)
-{
-    VSommet::Gom = Gom;
-}
 
 inline InfoAStar &VSommet::getInfoAStar ()
 {

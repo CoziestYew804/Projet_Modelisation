@@ -8,16 +8,22 @@
 #include <utility>
 #include <sstream>
 #include <string>
+#include "SFML/Graphics.hpp"
 
 using namespace std;
 
 class VArete
 {
 private:
-    int dir, temp;
-    inline void setDir (int dir);
+    int _temps, _duree, dir;
 public:
-    VArete (int dir, int temp = 0);
+
+
+private:
+    inline void setDir (int dir);
+    sf::Color couleur;
+public:
+    VArete (int dir,int temps, int duree, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
     VArete (const VArete &va);
 
@@ -28,8 +34,8 @@ public:
     friend ostream& operator<< (ostream &o, const VArete &va);
 
     inline int getDir () const;
-    inline int getTemp () const;
-    inline void setTemp (int temp);
+    inline int get_temps() const;
+    inline void set_temps(int _temps);
 };
 
 inline void VArete::setDir (int dir)
@@ -37,20 +43,20 @@ inline void VArete::setDir (int dir)
     VArete::dir = dir;
 }
 
-inline void VArete::setTemp (int temp)
-{
-    VArete::temp = temp;
-}
 
 inline int VArete::getDir () const
 {
     return dir;
 }
 
-inline int VArete::getTemp () const
-{
-    return temp;
+inline int VArete::get_temps() const {
+    return _temps;
 }
+
+inline void VArete::set_temps(int temps) {
+    VArete::_temps = temps;
+}
+
 
 
 #endif //PROJETSFML_PACMAN_VARETE_H

@@ -170,3 +170,5 @@ bool estFinal(const Sommet<VSommet> * sommet)
 {
 return OutilsCarte::estFinal(sommet);
 }
+
+

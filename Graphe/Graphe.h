@@ -20,6 +20,8 @@ Celle-ci définit à tout instant la clef qui sera attribuée au prochain élém
 #include "Sommet.h"
 #include "Arete.h"
 #include "../Screen/FenetreSFML.h"
+#include "OutilsCarte.h"
+#include "VSommet.h"
 
 /*
 classe sachant dessiner un graphe
@@ -237,6 +239,8 @@ class Graphe
     { return creeArete1(prochaineClef++, info, debut, fin); }
 
 
+    template<class Sommet>
+    void DFS(Sommet &s);
 };
 
 template<class S, class T>
@@ -663,7 +667,4 @@ for ( pS = this->lSommets; pS; pS = pS->s)
 
 return Fenetre.finitDessin(*this);
 }*/
-
-
-
 

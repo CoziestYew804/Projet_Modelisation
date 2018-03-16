@@ -249,5 +249,21 @@ else
 	   }
 }
 
+static void parcoursDFS(Graphe * g,Sommet * sommet)
+{
+	etat(sommet) = FERME;
+	for(Sommet * s : listeVoisins(sommet,g))
+		parcoursDFS(g, s);
+}
+
+static bool aUnCircuit(Graphe * g)
+{
+	for (Arete a : g->lAretes)
+	{
+		parcoursDFS(g, a.fin);
+		return etat(a.debut) == 1;
+	}
+
+}
 
 

@@ -169,9 +169,7 @@ public:
                         }
 
                     }
-                    cout << "Duree : " << stoi(subArray[8]) << " Cout : " << stoi(subArray[6]) << endl;
                     aretes.push_back(graphe.creeArete(VArete(stoi(subArray[8]), stoi(subArray[6])), listeSommet[subArray[2]], listeSommet[subArray[4]]));
-                    cout << *aretes.back() << endl;
                 }
                 ligne++;
             }

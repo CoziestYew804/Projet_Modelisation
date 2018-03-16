@@ -14,9 +14,6 @@ VArete::VArete (int duree, double c, sf::Color couleur):duree(duree), couleur(co
 VArete::~VArete ()
 = default;
 
-VArete::VArete (const VArete &va):duree(va.duree), couleur(va.couleur)
-{}
-
 VArete::operator string () const
 {
     ostringstream oss;

@@ -19,8 +19,7 @@ int main()
 
 // on l'active
     window.fenetre.setView(view);
-    //cout << B.graphe << endl;
-    cout << "Cout : " << B.aretes[10]->v.getInfoAlgo().c << endl;
+    cout << B.graphe << endl;
 
     while (window.fenetre.isOpen())
     {

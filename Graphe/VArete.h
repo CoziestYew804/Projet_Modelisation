@@ -22,7 +22,7 @@ private:
 public:
     VArete (int duree, double c, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
-    VArete (const VArete &va);
+    //VArete (const VArete &va);
 
     explicit operator string () const;
 
@@ -30,7 +30,7 @@ public:
 
     inline int getDuree() const;
     inline void setDuree(int duree);
-    inline InfoAlgo getInfoAlgo() const;
+    inline const InfoAlgo& getInfoAlgo() const;
     inline void setInfoAlgo(const InfoAlgo &infoAlgo);
 };
 
@@ -43,7 +43,7 @@ inline void VArete::setDuree(int duree)
     VArete::duree = duree;
 }
 
-inline InfoAlgo VArete::getInfoAlgo() const
+inline const InfoAlgo& VArete::getInfoAlgo() const
 {
     return infoAlgo;
 }

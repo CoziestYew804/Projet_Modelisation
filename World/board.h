@@ -28,7 +28,6 @@ public:
     int fichierLignes=1;
     std::pair <  int, int> pSommet;
 
-    int score;
 
     board()
     {

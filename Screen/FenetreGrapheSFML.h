@@ -71,7 +71,7 @@ inline bool dessineArete (RenderWindow &fenetre, const TransfoAffine2D &t, const
     Vecteur2D n = u.rotationDirecteQuartDeTour();
 
     //double e = 1;	// �paisseur du rectangle = 2*e. longueur du rectangle == AB
-    double e = 1;    // �paisseur du rectangle = 2*e. longueur du rectangle == AB
+    double e = 0.5;    // �paisseur du rectangle = 2*e. longueur du rectangle == AB
 
     Vecteur2D v = e * n;
 

@@ -62,24 +62,33 @@ public:
                         }
                 if(subArray.size()>0)
                 {
+                    subArray[0].erase(std::remove(subArray[0].begin(), subArray[0].end(), '\r'),
+                                      subArray[0].end());
+                    cout<<subArray[0]<<endl;
+                    cout<<subArray[0].size()<<endl;
+                    cout<< !subArray[0].compare("sectionSommets")<<endl;
                     if (!subArray[0].compare("sectionSommets")) {
                         pSommet.first = fichierLignes;
                         cout << subArray[0] << endl;
+                        cout << "je l'ai le section sommet" << endl;
                     }
                     if (!subArray[0].compare("sources")) {
                         pSommet.second = fichierLignes - 2;
                         cout<<subArray[0]<<endl;
+                        cout << "je l'ai le section source" << endl;
                     }
 
                     if (!subArray[0].compare("sectionArcs")) {
                         pArcs.first = fichierLignes + 1;
                         cout <<  "arc debut"<< subArray[0] << endl;
                         cout<< fichierLignes<<endl;
+                        cout << "je l'ai le section arcs" << endl;
                     }
                     if (!subArray[0].compare("sectionGraphes")) {
                         pArcs.second = fichierLignes - 2;
                         cout << "arc final"<< subArray[0] << endl;
                         cout<< fichierLignes<<endl;
+                        cout << "je l'ai le section graphe" << endl;
                     }
                 }
 

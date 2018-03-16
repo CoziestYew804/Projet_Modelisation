@@ -41,7 +41,7 @@ class OutilsCarte
 {
 public:
 static double distance( const Sommet<VSommet> * s1, const Sommet<VSommet> * s2);
-static Arete<VArete, VSommet> *  creeArete(Sommet<VSommet> * sA, Sommet<VSommet> * sB,Graphe<VArete, VSommet> & graphe);
+static Arete<VArete, VSommet> *  creeArete(Sommet<VSommet> * sA, Sommet<VSommet> * sB, Graphe<VArete, VSommet> & graphe);
 static void libereToutSommet(Graphe<VArete, VSommet> & graphe);
 static double hh(const Sommet<VSommet> * s);
 static PElement< pair<Sommet<VSommet>*,double> > * listeVoisins(const Sommet<VSommet> * s, const Graphe<VArete, VSommet> & graphe);

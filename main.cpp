@@ -1,5 +1,4 @@
-﻿﻿
-#include <iostream>
+﻿#include <iostream>
 #include "Graphe/Graphe.h"
 #include "Screen/Vecteur2D.h"
 #include "World/board.h"

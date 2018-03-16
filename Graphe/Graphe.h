@@ -20,7 +20,6 @@ Celle-ci définit à tout instant la clef qui sera attribuée au prochain élém
 #include "Sommet.h"
 #include "Arete.h"
 #include "../Screen/FenetreSFML.h"
-#include "OutilsCarte.h"
 #include "VSommet.h"
 
 /*

@@ -28,8 +28,6 @@ public:
     VArete (const VArete &va);
 
     explicit operator string () const;
-    void operator--();
-    void rechauffe();
 
     friend ostream& operator<< (ostream &o, const VArete &va);
 

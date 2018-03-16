@@ -22,7 +22,7 @@ constexpr int OUVERT = 1;
 constexpr int FERME = 2;
 
 
-class InfoAStar
+class InfoAlgo
 {
 public:
 const static char *ETATS []; // = {"LIBRE","OUVERT","FERME"};
@@ -33,13 +33,13 @@ double c;		// coût déjà calculé. cf. A* ou Dijkstra
 double h;		// estimation heuristique. cf. A*
 double g;		// coût total : g = h+c
 
-    explicit InfoAStar (AElement *pere = nullptr, const int etat = LIBRE,
-                        const double & c = 0, const double & h = 0, const double & g = 0) :
+    explicit InfoAlgo (const double & c = 0, AElement *pere = nullptr, const int etat = LIBRE,
+                         const double & h = 0, const double & g = 0) :
 		   	pere(pere), etat(etat), c(c), h(h), g(g) {}
 
     explicit operator string () const;
 
-friend ostream & operator << ( ostream & os, const InfoAStar & infoAStar) { return os << (string)infoAStar; }
+friend ostream & operator << ( ostream & os, const InfoAlgo & InfoAlgo) { return os << (string)InfoAlgo; }
 };
 
 

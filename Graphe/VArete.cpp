@@ -4,22 +4,24 @@
 
 #include "VArete.h"
 
-VArete::VArete (int temps, int duree, sf::Color couleur):temps(temps), duree(duree), couleur(couleur)
+VArete::VArete (int duree, double c, sf::Color couleur):duree(duree), couleur(couleur), infoAlgo(c)
 {
     //VArete::couleur = couleur;
+    //infoAlgo.c = c;
+    //cout << "Cout : " << infoAlgo.c << endl;
 }
 
 VArete::~VArete ()
 = default;
 
-VArete::VArete (const VArete &va):temps(va.temps), duree(va.duree), couleur(va.couleur)
+VArete::VArete (const VArete &va):duree(va.duree), couleur(va.couleur)
 {}
 
 VArete::operator string () const
 {
     ostringstream oss;
 
-    oss << "VArete : Dir : " << " temps : " << temps << " duree : " << duree;
+    oss << "VArete : Duree : " << duree << " Info : " << infoAlgo;
     return oss.str();
 }
 

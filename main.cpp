@@ -11,19 +11,16 @@ using namespace sf;
 
 int main()
 {
-
     board B;
     Vecteur2D coinBG(-0.5, ((B.listeSommet.size()-1)%5)+0.5);
-    Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -0.5);
+    Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -1);
     FenetreGrapheSFML window("Graphe !", coinBG, coinHD,1920,1080);
     sf::View view(sf::FloatRect(0,0,1920,1080));
 
 // on l'active
     window.fenetre.setView(view);
-
-    B.graphe.dessine(window);
-    //window.fenetre.draw(gameOver);
-    window.fenetre.display();
+    //cout << B.graphe << endl;
+    cout << "Cout : " << B.aretes[10]->v.getInfoAlgo().c << endl;
 
     while (window.fenetre.isOpen())
     {
@@ -41,21 +38,12 @@ int main()
                 view.zoom(1.5f);
                 //window.fenetre.setView(sf::View(visibleArea));
 
+                window.fenetre.clear();
                 B.graphe.dessine(window);
                 window.fenetre.display();
             }
             if(event.type == sf::Event::MouseWheelScrolled)
             {
-                /*if(event.mouseWheelScroll.wheel == sf::Mouse::VerticalWheel)
-                    std::cout << "wheel type: vertical" << std::endl;
-                else if(event.mouseWheelScroll.wheel == sf::Mouse::HorizontalWheel)
-                    std::cout << "wheel type: horizontal" << std::endl;
-                else
-                    std::cout << "wheel type: unknown" << std::endl;*/
-
-                std::cout << "wheel movement: " << event.mouseWheelScroll.delta << std::endl;
-                /*std::cout << "mouse x: " << event.mouseWheelScroll.x << std::endl;
-                std::cout << "mouse y: " << event.mouseWheelScroll.y << std::endl;*/
                 if(event.mouseWheelScroll.delta == 1)
                 {
                     view.zoom(0.5f);
@@ -146,20 +134,6 @@ int main()
 
             }
         }
-
     }
-
-
-
-
-
-
-
-
     return 0;
-
-
-
-
-
 }

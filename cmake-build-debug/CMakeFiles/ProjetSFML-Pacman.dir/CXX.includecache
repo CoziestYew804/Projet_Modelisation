@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Erreur.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Erreur.h
 string
 -
 iostream
@@ -14,11 +14,11 @@ iostream
 exception
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/AElement.cpp
 AElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/AElement.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/AElement.h
 iostream
 -
 string
@@ -26,7 +26,7 @@ string
 sstream
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Arete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Arete.h
 iostream
 -
 sstream
@@ -34,11 +34,11 @@ sstream
 string
 -
 GElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/GElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/GElement.h
 Sommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/GElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/GElement.h
 iostream
 -
 string
@@ -46,27 +46,27 @@ string
 sstream
 -
 AElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/AElement.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Graphe.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Graphe.h
 utility
 -
 PElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/PElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/PElement.h
 ../Erreur.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Erreur.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Erreur.h
 Sommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 Arete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Arete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Arete.h
 ../Screen/FenetreSFML.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreSFML.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/InfoAStar.cpp
 InfoAStar.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/InfoAStar.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/InfoAStar.h
 cstdlib
 -
 string
@@ -76,27 +76,27 @@ iostream
 sstream
 -
 AElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/AElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/AElement.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/OutilsCarte.cpp
 OutilsCarte.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/OutilsCarte.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/OutilsCarte.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/OutilsCarte.h
 ../Screen/AlgebreLineaire.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/AlgebreLineaire.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/AlgebreLineaire.h
 Sommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 VSommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.h
 VArete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.h
 Arete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Arete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Arete.h
 Graphe.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Graphe.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Graphe.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/PElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/PElement.h
 string
 -
 cstdlib
@@ -104,7 +104,7 @@ cstdlib
 sstream
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 iostream
 -
 sstream
@@ -112,13 +112,13 @@ sstream
 string
 -
 GElement.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/GElement.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/GElement.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.cpp
 VArete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.h
 utility
 -
 sstream
@@ -126,19 +126,19 @@ sstream
 string
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.cpp
 VSommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.h
 SFML/System.hpp
 -
 InfoAStar.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/InfoAStar.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/InfoAStar.h
 ../Screen/Vecteur2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Vecteur2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Vecteur2D.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/AlgebreLineaire.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/AlgebreLineaire.h
 cmath
 -
 iostream
@@ -148,29 +148,29 @@ sstream
 string
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreGrapheSFML.cpp
 FenetreGrapheSFML.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreGrapheSFML.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreGrapheSFML.h
 SFML/Graphics.hpp
 -
 ../Graphe/Sommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 ../Graphe/Arete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Arete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Arete.h
 TransfoAffine2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/TransfoAffine2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/TransfoAffine2D.h
 ../Graphe/VSommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.h
 ../Graphe/VArete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.h
 Vecteur2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Vecteur2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Vecteur2D.h
 ../Erreur.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Erreur.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Erreur.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreSFML.h
 cmath
 -
 SFML/Window.hpp
@@ -180,9 +180,9 @@ SFML/Graphics.hpp
 cmath
 -
 ../Graphe/Graphe.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Graphe.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Graphe.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Matrice22.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Matrice22.h
 iostream
 -
 sstream
@@ -192,15 +192,15 @@ string
 cmath
 -
 Vecteur2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Vecteur2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Vecteur2D.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Reels.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Reels.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/TransfoAffine2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/TransfoAffine2D.h
 Matrice22.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Matrice22.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Matrice22.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Vecteur2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Vecteur2D.h
 iostream
 -
 string
@@ -208,39 +208,39 @@ string
 cmath
 -
 AlgebreLineaire.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/AlgebreLineaire.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/AlgebreLineaire.h
 cfloat
 -
 Reels.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Reels.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Reels.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/World/Thing.cpp
 Thing.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/World/Thing.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/World/Thing.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/World/Thing.h
 ../Graphe/Sommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Sommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Sommet.h
 string
 -
 SFML/Graphics.hpp
 -
 ../Screen/FenetreSFML.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreSFML.h
 ../Screen/FenetreGrapheSFML.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreGrapheSFML.h
 ../Screen/TransfoAffine2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/TransfoAffine2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/TransfoAffine2D.h
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/World/board.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/World/board.h
 ../Graphe/Graphe.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Graphe.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Graphe.h
 ../Graphe/Arete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Arete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Arete.h
 ../Graphe/VSommet.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VSommet.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VSommet.h
 ../Graphe/VArete.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/VArete.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/VArete.h
 vector
 -
 iostream
@@ -252,15 +252,15 @@ fstream
 map
 -
 
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/main.cpp
+/home/arnaud/WorkspaceC++/Projet_Modelisation/main.cpp
 iostream
 -
 Graphe/Graphe.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Graphe/Graphe.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Graphe/Graphe.h
 Screen/Vecteur2D.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/Vecteur2D.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/Vecteur2D.h
 World/board.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/World/board.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/World/board.h
 Screen/FenetreGrapheSFML.h
-/Users/aminuniversita/CLionProjects/Projet_Modelisation/Screen/FenetreGrapheSFML.h
+/home/arnaud/WorkspaceC++/Projet_Modelisation/Screen/FenetreGrapheSFML.h
 

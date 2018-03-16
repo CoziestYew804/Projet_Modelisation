@@ -45,6 +45,39 @@ int main()
                 B.graphe.dessine(window);
                 window.fenetre.display();
             }
+            if(event.type == sf::Event::MouseWheelScrolled)
+            {
+                /*if(event.mouseWheelScroll.wheel == sf::Mouse::VerticalWheel)
+                    std::cout << "wheel type: vertical" << std::endl;
+                else if(event.mouseWheelScroll.wheel == sf::Mouse::HorizontalWheel)
+                    std::cout << "wheel type: horizontal" << std::endl;
+                else
+                    std::cout << "wheel type: unknown" << std::endl;*/
+
+                std::cout << "wheel movement: " << event.mouseWheelScroll.delta << std::endl;
+                /*std::cout << "mouse x: " << event.mouseWheelScroll.x << std::endl;
+                std::cout << "mouse y: " << event.mouseWheelScroll.y << std::endl;*/
+                if(event.mouseWheelScroll.delta == 1)
+                {
+                    view.zoom(0.5f);
+
+                    //window.fenetre.setView(sf::View(visibleArea));
+                    window.fenetre.clear();
+                    window.fenetre.setView(view);
+                    B.graphe.dessine(window);
+                    window.fenetre.display();
+                }
+                else if (event.mouseWheelScroll.delta == -1)
+                {
+                    //view.zoom(2.0f);
+                    //window.fenetre.setView(sf::View(visibleArea));
+                    view=window.fenetre.getDefaultView();
+                    window.fenetre.setView(window.fenetre.getDefaultView());
+                    window.fenetre.clear();
+                    B.graphe.dessine(window);
+                    window.fenetre.display();
+                }
+            }
             if (event.type == sf::Event::KeyPressed)
             {
                 if (event.key.code == sf::Keyboard::Z)

@@ -146,7 +146,7 @@ public:
                     }
 
                     int max=(pSommet.first-ligne)*-1;
-                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5)));
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5), 0));
 
                     sommets.push_back(listeSommet[subArray[0]]);
 
@@ -191,7 +191,7 @@ public:
 
                     }
 
-                    aretes.push_back(graphe.creeArete(0, listeSommet[subArray[2]], listeSommet[subArray[4]]));
+                    aretes.push_back(graphe.creeArete(VArete(1, 1), listeSommet[subArray[2]], listeSommet[subArray[4]]));
 
                 }
 

@@ -15,15 +15,11 @@ using namespace std;
 class VArete
 {
 private:
-    int _temps, _duree, dir;
-public:
-
-
+    int temps, duree;
 private:
-    inline void setDir (int dir);
     sf::Color couleur;
 public:
-    VArete (int dir,int temps, int duree, sf::Color couleur = sf::Color::Cyan);
+    VArete (int temps, int duree, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
     VArete (const VArete &va);
 
@@ -31,28 +27,27 @@ public:
 
     friend ostream& operator<< (ostream &o, const VArete &va);
 
-    inline int getDir () const;
-    inline int get_temps() const;
-    inline void set_temps(int _temps);
+    inline int getTemps() const;
+    inline void setTemps(int temps);
+    inline int getDuree() const;
+    inline void setDuree(int duree);
 };
 
-inline void VArete::setDir (int dir)
+inline int VArete::getTemps() const {
+    return temps;
+}
+
+inline void VArete::setTemps(int temps) {
+    VArete::temps = temps;
+}
+
+inline int VArete::getDuree() const
 {
-    VArete::dir = dir;
+    return duree;
 }
-
-
-inline int VArete::getDir () const
+inline void VArete::setDuree(int duree)
 {
-    return dir;
-}
-
-inline int VArete::get_temps() const {
-    return _temps;
-}
-
-inline void VArete::set_temps(int temps) {
-    VArete::_temps = temps;
+    VArete::duree = duree;
 }
 
 

@@ -4,7 +4,7 @@
 
 #include "VSommet.h"
 
-VSommet::VSommet (Vecteur2D position, bool marked = false, const InfoAStar &infoAStar) : position(position), infoAStar(infoAStar), marked(marked)
+VSommet::VSommet (Vecteur2D position, bool marked = false, const InfoAStar &infoAStar) : position(position), infoAStar(infoAStar)
 {}
 
 VSommet::~VSommet ()

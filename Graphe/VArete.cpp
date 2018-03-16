@@ -4,22 +4,22 @@
 
 #include "VArete.h"
 
-VArete::VArete(int dir, int temps, int duree, sf::Color couleur = sf::Color::Cyan) : dir(dir), _temps(temps), _duree(duree)
+VArete::VArete (int temps, int duree, sf::Color couleur):temps(temps), duree(duree), couleur(couleur)
 {
-
+    //VArete::couleur = couleur;
 }
 
 VArete::~VArete ()
 = default;
 
-VArete::VArete (const VArete &va): dir(va.dir), _temps(va._temps), _duree(va._duree)
+VArete::VArete (const VArete &va):temps(va.temps), duree(va.duree), couleur(va.couleur)
 {}
 
 VArete::operator string () const
 {
     ostringstream oss;
 
-    oss << "VArete : Dir : " << dir << " temps : " << _temps << " duree : " << _duree;
+    oss << "VArete : Dir : " << " temps : " << temps << " duree : " << duree;
     return oss.str();
 }
 
@@ -27,6 +27,7 @@ ostream &operator<< (ostream &o, const VArete &va)
 {
     o << (string)va;
 }
+
 
 
 

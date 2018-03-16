@@ -7,10 +7,10 @@ return norme(s1->v.getPosition() - s2->v.getPosition());
 //return 0;
 }
 
-/*static*/ Arete<VArete, VSommet> *  OutilsCarte::creeArete(Sommet<VSommet> * sA, Sommet<VSommet> * sB, Graphe<VArete, VSommet> & graphe)
+/*static Arete<VArete, VSommet> *  OutilsCarte::creeArete(Sommet<VSommet> * sA, Sommet<VSommet> * sB, Graphe<VArete, VSommet> & graphe)
 {
 return graphe.creeArete( VArete(OutilsCarte::distance(sA,sB)), sA, sB);
-}
+}*/
 
 /*static*/ void OutilsCarte::libereToutSommet(Graphe<VArete, VSommet> & graphe)
 {

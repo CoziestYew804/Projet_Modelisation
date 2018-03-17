@@ -4,20 +4,20 @@
 
 #include "VSommet.h"
 
-VSommet::VSommet (Vecteur2D position, bool marked = false, const InfoAStar &infoAStar) : position(position), infoAStar(infoAStar)
+VSommet::VSommet (Vecteur2D position) : position(position)
 {}
 
 VSommet::~VSommet ()
 = default;
 
-VSommet::VSommet (const VSommet &vs) : position(vs.position), infoAStar(vs.infoAStar)
+VSommet::VSommet (const VSommet &vs) : position(vs.position), infoAlgo(vs.infoAlgo)
 {}
 
 VSommet::operator string () const
 {
     ostringstream oss;
 
-    oss << "VSommet :" << " InfoAStar :" << infoAStar << " Position : "
+    oss << "VSommet :" << " InfoAStar :" << infoAlgo << " Position : "
         << position;
     return oss.str();
 }

@@ -15,9 +15,6 @@
 #include <fstream>
 #include <map>
 
-
-
-
 class board
 {
 public:
@@ -27,7 +24,6 @@ public:
     vector<Arete<VArete, VSommet> *> aretes;
     int fichierLignes=1;
     std::pair <  int, int> pSommet;
-
 
     board()
     {
@@ -91,25 +87,16 @@ public:
                         cout << "je l'ai le section graphe" << endl;
                     }
                 }
-
                 fichierLignes++;
-
-
             }
-
-
             fichier.close();
         }
         else
         {
             cerr << "Impossible d'ouvrir le fichier !" << endl;
         }
-
-
         ExtractionSommet(pSommet,input);
         ExtractionArc(pArcs,input);
-
-
     }
 
     virtual ~board ()
@@ -126,7 +113,6 @@ public:
         {
             while (getline(fichier, line))  // tant que l'on peut mettre la ligne dans "contenu"
             {
-
                 int len = line.length();
                 vector<string> subArray;
                 if (ligne >= pSommet.first && ligne < pSommet.second) {
@@ -146,23 +132,16 @@ public:
                     }
 
                     int max=(pSommet.first-ligne)*-1;
-                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5), 0));
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5)));
 
                     sommets.push_back(listeSommet[subArray[0]]);
-
                 }
-
                 ligne++;
-
-
             }
-
-
             fichier.close();
         } else {
             cerr << "Impossible d'ouvrir le fichier !" << endl;
         }
-
     }
     void ExtractionArc( pair<int,int>  pArcs, string input ) {
         ifstream fichier("Graphe files/" + input+".gpr", ios::in);
@@ -190,26 +169,17 @@ public:
                         }
 
                     }
-
-                    aretes.push_back(graphe.creeArete(VArete(1, 1), listeSommet[subArray[2]], listeSommet[subArray[4]]));
-
+                    aretes.push_back(graphe.creeArete(VArete(stoi(subArray[8]), stoi(subArray[6])), listeSommet[subArray[2]], listeSommet[subArray[4]]));
                 }
-
                 ligne++;
-
-
             }
-
             fichier.close();
 
         } else {
 
             cerr << "Impossible d'ouvrir le fichier !" << endl;
         }
-
     }
-
-
 };
 
 

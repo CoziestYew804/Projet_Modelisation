@@ -7,18 +7,17 @@
 
 
 #include <SFML/System.hpp>
-#include "InfoAStar.h"
+#include "InfoAlgo.h"
 #include "../Screen/Vecteur2D.h"
 
 class VSommet
 {
 public:
-    InfoAStar infoAStar;
+    InfoAlgo infoAlgo;
 private:
     Vecteur2D position;
 public:
-    explicit VSommet (Vecteur2D position, bool marked,
-                      const InfoAStar &infoAStar = InfoAStar());
+    explicit VSommet (Vecteur2D position);
     virtual ~VSommet ();
     VSommet (const VSommet &vs);
 
@@ -26,8 +25,8 @@ public:
 
     friend ostream &operator<< (ostream &o, const VSommet &vs);
 
-    inline InfoAStar &getInfoAStar ();
-    inline void setInfoAStar (const InfoAStar &infoAStar);
+    inline InfoAlgo &getInfoAlgo ();
+    inline void setInfoAlgo (const InfoAlgo &InfoAlgo);
 
     inline const Vecteur2D &getPosition () const;
 
@@ -39,14 +38,14 @@ public:
 
 };
 
-inline InfoAStar &VSommet::getInfoAStar ()
+inline InfoAlgo &VSommet::getInfoAlgo ()
 {
-    return infoAStar;
+    return infoAlgo;
 }
 
-inline void VSommet::setInfoAStar (const InfoAStar &infoAStar)
+inline void VSommet::setInfoAlgo (const InfoAlgo &InfoAlgo)
 {
-    VSommet::infoAStar = infoAStar;
+    VSommet::infoAlgo = InfoAlgo;
 }
 
 inline const Vecteur2D &VSommet::getPosition () const

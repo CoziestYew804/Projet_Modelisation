@@ -49,39 +49,39 @@ return OutilsCarte::distance(s,OutilsCarte::cible);
 
 /*static*/ Sommet<VSommet> *  OutilsCarte::pere(const Sommet<VSommet> * sommet)
 {
-return (Sommet<VSommet>*)sommet->v.infoAStar.pere;
+return (Sommet<VSommet>*)sommet->v.infoAlgo.pere;
 }
 
 
 /*static*/ Sommet<VSommet> * & OutilsCarte::pere( Sommet<VSommet> * sommet)
 {
-return (Sommet<VSommet> *&)(sommet->v.infoAStar.pere);
+return (Sommet<VSommet> *&)(sommet->v.infoAlgo.pere);
 }
 
 /*static*/ int & OutilsCarte::etat( Sommet<VSommet> * sommet)
 {
-return sommet->v.infoAStar.etat;
+return sommet->v.infoAlgo.etat;
 }
 
 /*static*/ double & OutilsCarte::c( Sommet<VSommet> * sommet)
 {
-return sommet->v.infoAStar.c;
+return sommet->v.infoAlgo.c;
 }
 
 /*static*/ double & OutilsCarte::h( Sommet<VSommet> * sommet)
 {
-return sommet->v.infoAStar.h;
+return sommet->v.infoAlgo.h;
 }
 
 /*static*/ double OutilsCarte::g( const Sommet<VSommet> * sommet)
 {
-return sommet->v.infoAStar.g;
+return sommet->v.infoAlgo.g;
 }
 
 
 /*static*/ double & OutilsCarte::g( Sommet<VSommet> * sommet)
 {
-return sommet->v.infoAStar.g;
+return sommet->v.infoAlgo.g;
 }
 
 /*static*/ bool OutilsCarte::estFinal(const Sommet<VSommet> * sommet)

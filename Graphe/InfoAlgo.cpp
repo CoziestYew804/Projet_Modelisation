@@ -1,8 +1,8 @@
-#include "InfoAStar.h"
+#include "InfoAlgo.h"
 
-const /*static*/ char *InfoAStar::ETATS []= {"LIBRE","OUVERT","FERME"};
+const /*static*/ char *InfoAlgo::ETATS []= {"LIBRE","OUVERT","FERME"};
 
-InfoAStar::operator string() const
+InfoAlgo::operator string() const
 {
 ostringstream oss;
 

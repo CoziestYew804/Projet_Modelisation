@@ -9,37 +9,30 @@
 #include <sstream>
 #include <string>
 #include "SFML/Graphics.hpp"
+#include "InfoAlgo.h"
 
 using namespace std;
 
 class VArete
 {
 private:
-    int temps, duree;
-private:
+    int duree;
     sf::Color couleur;
+    InfoAlgo infoAlgo;
 public:
-    VArete (int temps, int duree, sf::Color couleur = sf::Color::Cyan);
+    VArete (int duree, double c, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
-    VArete (const VArete &va);
+    //VArete (const VArete &va);
 
     explicit operator string () const;
 
     friend ostream& operator<< (ostream &o, const VArete &va);
 
-    inline int getTemps() const;
-    inline void setTemps(int temps);
     inline int getDuree() const;
     inline void setDuree(int duree);
+    inline const InfoAlgo& getInfoAlgo() const;
+    inline void setInfoAlgo(const InfoAlgo &infoAlgo);
 };
-
-inline int VArete::getTemps() const {
-    return temps;
-}
-
-inline void VArete::setTemps(int temps) {
-    VArete::temps = temps;
-}
 
 inline int VArete::getDuree() const
 {
@@ -50,6 +43,13 @@ inline void VArete::setDuree(int duree)
     VArete::duree = duree;
 }
 
-
+inline const InfoAlgo& VArete::getInfoAlgo() const
+{
+    return infoAlgo;
+}
+inline void VArete::setInfoAlgo(const InfoAlgo &infoAlgo)
+{
+    VArete::infoAlgo = infoAlgo;
+}
 
 #endif //PROJETSFML_PACMAN_VARETE_H

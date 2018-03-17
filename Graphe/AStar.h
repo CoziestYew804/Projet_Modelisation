@@ -72,6 +72,8 @@ suppose que la méthode listeVoisins(sommet,graphe) retourne la liste des paires
 hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
 
 */
+
+
 static bool aStar1Cible(Graphe & graphe, Sommet * depart, Sommet * cible,
 			double (*hh)(const Sommet * s1, const Sommet * s2)/*,
 			PElement< pair<Sommet*,double> > * (*listeVoisins)(const Sommet * s, const Graphe & graphe),
@@ -123,6 +125,60 @@ return false; // échec
 
 }	// aStar1Cible
 
+
+
+static Sommet * Djikstra(Graphe & graphe, Sommet * depart)
+{
+	libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
+	PElement<Sommet> * Ouverts;
+	while(graphe->lSommets)
+	{
+		c(graphe->lSommets->valeur) = -1; // On met tous les couts des sommets du graphe à -1 car on ne connait pas les distances
+	}
+	pere(depart) = NULL; // Le père du départ est nul, logique puisque on part du point de départ
+	c(depart) = 0; // On met le cout du départ à 0, logique puisque la distance entre le départ et lui même est de 0 km !
+
+	Ouverts = new PElement<Sommet>(depart,NULL);
+	etat(depart) = OUVERT; //
+
+	while(Ouverts)
+	{
+		Sommet  * s =PElement<Sommet>::depiler(Ouverts);
+		etat(s) = FERME;
+
+		if(estFinal(s)) return s;
+
+		PElement< pair<Sommet*,double> > * listeDesVoisins = listeVoisins(s, graphe);
+		PElement< pair<Sommet*,double> > * lvTemp = listeDesVoisins;
+
+			while(lvTemp)
+			{
+				Sommet * v = lvTemp->valeur->first;
+				double coutSversV = graphe->getAreteParSommets(s, v)->distance;
+				if(etat(v)==LIBRE)
+				{
+					pere(v) = s;
+					c(v) = c(s) + coutSversV;
+					etat(v) = OUVERT;
+					Ouverts = new PElement<Sommet>(v,Ouverts);
+				}
+				else
+				{
+					if(etat(v) == OUVERT && c(s) < (coutSversV + c(v)))
+                    {
+                        pere(v) = s;
+                        c(v)= c(s) + coutSversV;
+                        Ouverts->depiler(v);
+                        Ouverts = new PElement<Sommet>(v,Ouverts);
+                    }
+				}
+
+				lvTemp = lvTemp -> suivant;
+			}
+
+	}
+    return NULL;
+}
 /**
 
 recherche  dans graphe le plus court chemin de départ à un état final par l'algo A*.
@@ -258,10 +314,12 @@ static void parcoursDFS(Graphe * g,Sommet * sommet)
 
 static bool aUnCircuit(Graphe * g)
 {
-	for (Arete a : g->lAretes)
+
+    PElement<Arete> * aretes = g->lAretes;
+	while (aretes)
 	{
-		parcoursDFS(g, a.fin);
-		return etat(a.debut) == 1;
+        parcoursDFS(g,aretes->valeur->fin);
+		return etat(aretes->valeur->debut) == 1;
 	}
 
 }

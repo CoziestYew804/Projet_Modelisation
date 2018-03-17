@@ -442,11 +442,6 @@ Graphe<S, T>::adjacences(const Sommet <T> *sommet) const
             r = new PElement < pair < Sommet < T > *, Arete < S, T > * > >
                                                                  (new pair < Sommet < T > *, Arete < S, T > * >
                                                                                                         (l->valeur->fin, l->valeur), r);
-        else if (sommet == l->valeur->fin)
-            r = new PElement < pair < Sommet < T > *, Arete < S, T > * > >
-                                                                 (new pair < Sommet < T > *, Arete < S, T > * >
-                                                                                                        (l->valeur->debut, l->valeur), r);
-
     return r;
 }
 

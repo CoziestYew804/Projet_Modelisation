@@ -32,18 +32,18 @@ return OutilsCarte::distance(s,OutilsCarte::cible);
 
 /*static*/ PElement< pair<Sommet<VSommet>*,double> > * OutilsCarte::listeVoisins(const Sommet<VSommet> * s, const Graphe<VArete, VSommet> & graphe)
 {
-PElement< pair < Sommet<VSommet> *, Arete<VArete,VSommet> * > > * ladj, *lA;						// pair < Sommet<VSommet> *, Arete<VArete,VSommet> * >
+    PElement< pair < Sommet<VSommet> *, Arete<VArete,VSommet> * > > * ladj, *lA;						// pair < Sommet<VSommet> *, Arete<VArete,VSommet> * >
 
-ladj = graphe.adjacences(s);
+    ladj = graphe.adjacences(s);
 
-PElement< pair<Sommet<VSommet>*,double> > * lVC;
+    PElement< pair<Sommet<VSommet>*,double> > * lVC;
 
-for ( lA = ladj, lVC = NULL; lA; lA = lA->suivant)
-	lVC = new PElement< pair<Sommet<VSommet>*,double> >( new pair<Sommet<VSommet>*,double>(lA->valeur->first,1),lVC);
+    for ( lA = ladj, lVC = NULL; lA; lA = lA->suivant)
+        lVC = new PElement< pair<Sommet<VSommet>*,double> >( new pair<Sommet<VSommet>*,double>(lA->valeur->first,1),lVC);
 
 
-PElement< pair< Sommet<VSommet> *, Arete<VArete,VSommet> * > >::efface2(ladj);
-return lVC;
+    PElement< pair< Sommet<VSommet> *, Arete<VArete,VSommet> * > >::efface2(ladj);
+    return lVC;
 
 }
 

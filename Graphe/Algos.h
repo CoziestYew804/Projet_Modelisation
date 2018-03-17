@@ -108,10 +108,12 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
     }	// aStar1Cible
 
 /**
- * Recherche de chemin le plus court avec l'algorithme de Dijkstra.
+ * Recherche  dans graphe le plus court chemin de départ à un état final par l'algo de Dijkstra.
+ * en cas de succès, les liens "père" des sommets indiquent le chemin à suivre en partant du sommet-cible trouvé vers départ.
+ * le père de départ vaut toujours NULL en sortie (c'est la racine du chemin ou bien encore la fin de la liste chaînée "père")
  * @param graphe : Le graphe utilisé
  * @param depart : Sommet de départ
- * @return : Pointeur sur le sommet cible trouvé
+ * @return : Pointeur sur le sommet cible trouvé (le 1er sommet rencontré qui satisfait estFinal()) si succès et NULL si échec
  */
     static Sommet * Djikstra(Graphe & graphe, Sommet * depart)
     {
@@ -256,15 +258,15 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
 }; // AStarT
 
 /**
-Tâche : Construit sous une forme plus pratique le résultat de l'algo A* :
-transforme sous forme de liste chaînée PElement<Sommet> la liste chaînée définie par les liens père qui a été produite par A*.
+Tâche : Construit sous une forme plus pratique le résultat de l'algo A* et l'algo Dijkstra:
+transforme sous forme de liste chaînée PElement<Sommet> la liste chaînée définie par les liens père qui a été produite par A* ou Dijkstra.
 
-Rappel : L'algo A* crée une liste chaînée dont le maillon de tête est cible et dont le maillon final est départ.
-La méthode chemin(,) construit une liste chaînée qui inverse le sens de parcours de la liste "lien père" produite par A*.
+Rappel : L'algo A* et Dijkstra créent une liste chaînée dont le maillon de tête est cible et dont le maillon final est départ.
+La méthode chemin(,) construit une liste chaînée qui inverse le sens de parcours de la liste "lien père" produite par A* ou Dijkstra.
 DONNEES :
 cible : sommet final trouvé par A* (celui qui vérifie la condition estFinal(...))
 
-RESULTATS : debut : qui pointe sur le 1er maillon de la nouvelle liste créée (il pointe donc aussi sur le sommet depart de l'algo A*)
+RESULTATS : debut : qui pointe sur le 1er maillon de la nouvelle liste créée (il pointe donc aussi sur le sommet depart de l'algo A* ou de l'algo de Dijkstra)
 et par return un pointeur sur le dernier maillon de la liste chaînée PElement<Sommet> * construite.
 Le pointeur renvoyé par return pointe donc sur cible.
 
@@ -292,11 +294,13 @@ PElement<Sommet> * chemin( Sommet * cible, PElement<Sommet> * & debut)
     }
 }
 
-static void parcoursDFS(Graphe * g,Sommet * sommet)
+static void parcoursDFS(Graphe g,Sommet * sommet)
 {
     etat(sommet) = FERME;
-    for(Sommet * s : listeVoisins(sommet,g))
-        parcoursDFS(g, s);
+    PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(sommet,g);
+    PElement<pair<Sommet<VSommet>*, double>>* v;
+    for( v = voisins; v; v = v->suivant)
+        parcoursDFS(g, v->valeur->first);
 }
 
 static bool aUnCircuit(Graphe * g)
@@ -305,8 +309,8 @@ static bool aUnCircuit(Graphe * g)
     PElement<Arete> * aretes = g->lAretes;
     while (aretes)
     {
-        parcoursDFS(g,aretes->valeur->fin);
-        return etat(aretes->valeur->debut) == 1;
+        parcoursDFS(*g,aretes->valeur->fin);
+        return etat(aretes->valeur->debut) == OUVERT;
     }
 
 }

@@ -3,6 +3,7 @@
 #include "Screen/Vecteur2D.h"
 #include "World/board.h"
 #include "Screen/FenetreGrapheSFML.h"
+#include "GestionFichier/CreateFile.h"
 
 
 using namespace std;
@@ -19,7 +20,13 @@ int main()
 
 // on l'active
     window.fenetre.setView(view);
-    cout << B.graphe << endl;
+    //cout << B.graphe << endl;
+    //cout << B.aretes[1] << endl;
+
+
+    B.graphe.dessine(window);
+    window.fenetre.display();
+
 
     while (window.fenetre.isOpen())
     {
@@ -118,6 +125,11 @@ int main()
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
                     window.fenetre.display();
+                }
+                if (event.key.code == sf::Keyboard::S)
+                {
+                    //cout<<B.sommets[5]->v.nom<<endl;
+                    CreateFile * c = new CreateFile(B);
                 }
 
                 if (event.key.code == sf::Keyboard::Right)

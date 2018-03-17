@@ -4,8 +4,9 @@
 
 #include "VArete.h"
 
-VArete::VArete (int duree, double c, sf::Color couleur):duree(duree), couleur(couleur), infoAlgo(c)
+VArete::VArete (string nom, int duree, int c, sf::Color couleur):duree(duree), couleur(couleur), infoAlgo(c), nom(nom)
 {
+
     //VArete::couleur = couleur;
     //infoAlgo.c = c;
     //cout << "Cout : " << infoAlgo.c << endl;
@@ -18,7 +19,7 @@ VArete::operator string () const
 {
     ostringstream oss;
 
-    oss << "VArete : Duree : " << duree << " Info : " << infoAlgo;
+    oss << "VArete : << nom: "<< nom <<" Duree : " << duree << " Info : " << infoAlgo;
     return oss.str();
 }
 

@@ -14,16 +14,20 @@ class VSommet
 {
 public:
     InfoAlgo infoAlgo;
+    string nom;
+    int bordInf,bordSup;
 private:
     Vecteur2D position;
 public:
-    explicit VSommet (Vecteur2D position);
+    explicit VSommet (Vecteur2D position,string nom, int bordInf, int bordSup);
     virtual ~VSommet ();
-    VSommet (const VSommet &vs);
+    //VSommet (const VSommet &vs);
 
     explicit operator string () const;
 
     friend ostream &operator<< (ostream &o, const VSommet &vs);
+
+    inline string &getNom ();
 
     inline InfoAlgo &getInfoAlgo ();
     inline void setInfoAlgo (const InfoAlgo &InfoAlgo);
@@ -41,6 +45,11 @@ public:
 inline InfoAlgo &VSommet::getInfoAlgo ()
 {
     return infoAlgo;
+}
+
+inline string &VSommet::getNom  ()
+{
+    return nom;
 }
 
 inline void VSommet::setInfoAlgo (const InfoAlgo &InfoAlgo)

@@ -19,8 +19,10 @@ private:
     int duree;
     sf::Color couleur;
     InfoAlgo infoAlgo;
+
 public:
-    VArete (int duree, double c, sf::Color couleur = sf::Color::Cyan);
+    string nom;
+    VArete (string nom,int duree, int c, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
     //VArete (const VArete &va);
 

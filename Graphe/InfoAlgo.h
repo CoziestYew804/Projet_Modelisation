@@ -35,7 +35,7 @@ double g;		// coût total : g = h+c
 
     explicit InfoAlgo (const double & c = 0, AElement *pere = nullptr, const int etat = LIBRE,
                          const double & h = 0, const double & g = 0) :
-		   	pere(pere), etat(etat), c(c), h(h), g(g) {}
+		   	pere(pere), etat(etat), c(c), h(h), g(g) { cout<<"je suis dans l'arrete et c =" << c <<endl;}
 
     explicit operator string () const;
 

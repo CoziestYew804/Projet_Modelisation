@@ -22,8 +22,9 @@ public:
     map<string, Sommet<VSommet>*> listeSommet; // map qui contient les sommet par leur nom
     vector<Sommet<VSommet> *> sommets;
     vector<Arete<VArete, VSommet> *> aretes;
+    //map<string, Arete<VArete,VSommet>*> aretes; // map qui contient les arcs par leur nom
     int fichierLignes=1;
-    std::pair <  int, int> pSommet;
+    std::pair < int, int> pSommet;
 
     board()
     {
@@ -132,7 +133,8 @@ public:
                     }
 
                     int max=(pSommet.first-ligne)*-1;
-                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5)));
+                    listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5),subArray[0],stoi(subArray[2]),stoi(subArray[4])));
+                    cout<<"le nom du bordSup : " <<subArray[2]<<endl;
 
                     sommets.push_back(listeSommet[subArray[0]]);
                 }
@@ -169,7 +171,10 @@ public:
                         }
 
                     }
-                    aretes.push_back(graphe.creeArete(VArete(stoi(subArray[8]), stoi(subArray[6])), listeSommet[subArray[2]], listeSommet[subArray[4]]));
+                    cout << "Duree : " << stoi(subArray[8]) << " Cout : " << stoi(subArray[6]) << endl;
+                    cout << "Nom : " << subArray[0]<< endl;
+                    aretes.push_back(graphe.creeArete(VArete(subArray[0],stoi(subArray[8]), stoi(subArray[6])), listeSommet[subArray[2]], listeSommet[subArray[4]]));
+                    //cout << aretes.back()->v << endl;
                 }
                 ligne++;
             }

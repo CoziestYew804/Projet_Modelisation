@@ -3,7 +3,7 @@
 #include "Screen/Vecteur2D.h"
 #include "World/board.h"
 #include "Screen/FenetreGrapheSFML.h"
-#include "GestionFichier/CreateFile.h"
+#include "GestionFichier/File.h"
 
 
 using namespace std;
@@ -13,6 +13,7 @@ using namespace sf;
 int main()
 {
     board B;
+    File::Read(B);
     Vecteur2D coinBG(-0.5, ((B.listeSommet.size()-1)%5)+0.5);
     Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -1);
     FenetreGrapheSFML window("Graphe !", coinBG, coinHD,1920,1080);
@@ -128,8 +129,7 @@ int main()
                 }
                 if (event.key.code == sf::Keyboard::S)
                 {
-                    //cout<<B.sommets[5]->v.nom<<endl;
-                    CreateFile * c = new CreateFile(B);
+                    File::Save(B);
                 }
 
                 if (event.key.code == sf::Keyboard::Right)

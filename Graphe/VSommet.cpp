@@ -4,10 +4,8 @@
 
 #include "VSommet.h"
 
-VSommet::VSommet (Vecteur2D position,string _nom, int bordInf , int bordSup) : position(position) , nom(_nom) , bordSup(bordSup) , bordInf(bordInf)
-{//nom=_nom;
-//cout <<"le name sssssss " << nom<<endl;
-}
+VSommet::VSommet (Vecteur2D position,string _nom, int bordInf , int bordSup, sf::Color couleur) : position(position) , nom(_nom) , bordSup(bordSup) , bordInf(bordInf), couleur(couleur)
+{}
 
 VSommet::~VSommet ()
 = default;

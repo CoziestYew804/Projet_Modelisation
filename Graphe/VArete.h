@@ -19,7 +19,6 @@ private:
     int duree;
     sf::Color couleur;
     InfoAlgo infoAlgo;
-
 public:
     string nom;
     VArete (string nom,int duree, int c, sf::Color couleur = sf::Color::Cyan);
@@ -34,6 +33,8 @@ public:
     inline void setDuree(int duree);
     inline const InfoAlgo& getInfoAlgo() const;
     inline void setInfoAlgo(const InfoAlgo &infoAlgo);
+    inline const sf::Color &getCouleur () const;
+    inline void setCouleur (const sf::Color &couleur);
 };
 
 inline int VArete::getDuree() const
@@ -52,6 +53,16 @@ inline const InfoAlgo& VArete::getInfoAlgo() const
 inline void VArete::setInfoAlgo(const InfoAlgo &infoAlgo)
 {
     VArete::infoAlgo = infoAlgo;
+}
+
+inline const sf::Color &VArete::getCouleur () const
+{
+    return couleur;
+}
+
+inline void VArete::setCouleur (const sf::Color &couleur)
+{
+    VArete::couleur = couleur;
 }
 
 #endif //PROJETSFML_PACMAN_VARETE_H

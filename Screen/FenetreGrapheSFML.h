@@ -12,6 +12,8 @@
 #include "../Graphe/VArete.h"
 #include "Vecteur2D.h"
 #include "../Erreur.h"
+#include "../Graphe/PElement.h"
+#include "../Graphe/Graphe.h"
 
 using namespace sf;
 using namespace std;
@@ -44,7 +46,7 @@ inline bool dessineSommet (RenderWindow &fenetre, const TransfoAffine2D &t, cons
     disque.setFillColor(Color::Black);
     //float epaisseurBord = (0.15f * 30.0f);
     disque.setOutlineThickness(10);
-    disque.setOutlineColor(Color::Cyan);
+    disque.setOutlineColor(vSommet.getCouleur());
 
     Vector2f p1 = vecteur2DToVector2f(position1);
     disque.setPosition(p1);
@@ -56,8 +58,7 @@ inline bool dessineSommet (RenderWindow &fenetre, const TransfoAffine2D &t, cons
 /**
 dï¿½but et fin sont en coordonnï¿½es monde
 */
-inline bool dessineArete (RenderWindow &fenetre, const TransfoAffine2D &t, const Vecteur2D &debut, const Vecteur2D &fin,
-                          const Color couleur)
+inline bool dessineArete (RenderWindow &fenetre, const TransfoAffine2D &t, const Vecteur2D &debut, const Vecteur2D &fin, const VArete &vArete)
 {
     Vecteur2D A, B;    // {AB] est l'arï¿½te ï¿½ reprï¿½senter
 
@@ -90,7 +91,7 @@ inline bool dessineArete (RenderWindow &fenetre, const TransfoAffine2D &t, const
     rectangle.setPoint(3, F3);
 
 
-    rectangle.setFillColor(couleur);
+    rectangle.setFillColor(vArete.getCouleur());
     fenetre.draw(rectangle);
 
     return true;
@@ -145,75 +146,13 @@ On suppose que les coordonnï¿½es des sommets sont dï¿½finies par rapport au repï
     template<class S, class T>
     bool dessine (const Arete<S, T> *arete);
 
+    /**
+    * Dessine un chemin (PElement) dans le graphe
+    */
+
+    template <class S, class T>
+    bool changeCouleurChemin(const PElement<Sommet<T>> * chemin, Graphe<S, T> &G);
 };
-
-
-/*{
-// on va dessiner un rectangle trï¿½s fin pour reprï¿½senter l'arï¿½te
-
-Vecteur2D A(arete->debut->v.p), B(arete->fin->v.p);	// {AB] est l'arï¿½te ï¿½ reprï¿½senter
-
-A = t.applique(A); B = t.applique(B);		// on passe des coordonnï¿½es monde aux coordonnï¿½es ï¿½cran
-
-Vecteur2D u = B-A;
-
-double nU = norme(u);
-u /=nU;
-Vecteur2D  n = u.rotationDirecteQuartDeTour();
-
-double e = 1;	// ï¿½paisseur du rectangle = 2*e. longueur du rectangle == AB
-
-Vecteur2D v = e*n;
-
-Vecteur2D A0= A-v,A1 = B-v, A2 = B+v,A3 = A+v; // on calcule les 4 sommets du rectangle dont l'arï¿½te [AB] est un axe de symï¿½trie
-
-Vector2f F0 = vecteur2DToVector2f(A0);
-Vector2f F1 = vecteur2DToVector2f(A1);
-Vector2f F2 = vecteur2DToVector2f(A2);
-Vector2f F3 = vecteur2DToVector2f(A3);
-
-ConvexShape rectangle(4);
-rectangle.setPoint(0,F0);
-rectangle.setPoint(1,F1);
-rectangle.setPoint(2,F2);
-rectangle.setPoint(3,F3);
-
-rectangle.setFillColor(Color(arete->v.fond));
-fenetre.draw(rectangle);
-rectangle.setFillColor(Color(arete->v.devant));
-fenetre.draw(rectangle);
-
-return true;
-}*/
-
-//---------------------------------------dessine le cas particulier de InfoSommet et InfoArete ------------------------------
-
-/* *
-Dessine un sommet du graphe. Exemples :  nom, couleur, informations associï¿½es, etc.
-renvoie true en cas de succï¿½s, false en cas d'ï¿½chec
-On suppose que les coordonnï¿½es du sommet sont dï¿½finies par rapport au repï¿½re du monde
-* /
-template <>
-bool FenetreGrapheSFML::dessine<InfoSommet>(const Sommet<InfoSommet> * sommet)
-{
-return dessinePetitRond(this->fenetre, this->t, sommet->v.vSommet, this->font);
-}
-
-/ **
-Dessine un arï¿½te du graphe. Exemples :  nom, couleur, informations associï¿½es, etc.
-renvoie true en cas de succï¿½s, false en cas d'ï¿½chec
-On suppose que les coordonnï¿½es des sommets sont dï¿½finies par rapport au repï¿½re du monde
-* /
-template <>
-bool FenetreGrapheSFML::dessine<InfoArete,InfoSommet>(const Arete<InfoArete,InfoSommet> * arete)
-{
-return dessineSegment( this->fenetre, this->t, arete->v.couleur, arete->debut->v.vSommet.p, arete->fin->v.vSommet.p);
-}
-*/
-
-
-//----------------------------------------------------------------------------------
-
 
 
 #endif // FENETRE_H

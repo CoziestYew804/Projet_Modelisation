@@ -4,6 +4,7 @@
 #include "World/board.h"
 #include "Screen/FenetreGrapheSFML.h"
 #include "GestionFichier/File.h"
+#include "Graphe/Algos.h"
 
 
 using namespace std;
@@ -25,6 +26,8 @@ int main()
     //cout << B.aretes[1] << endl;
 
 
+    //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0],B.sommets[5]);
+    window.changeCouleurChemin(TriTopologique(B.graphe, B.sommets[0], B.sommets[20]), B.graphe);
     B.graphe.dessine(window);
     window.fenetre.display();
 

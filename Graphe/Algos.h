@@ -13,9 +13,6 @@
 #include"PElement.h"
 #include "OutilsCarte.h"
 
-
-
-
 /**
 suppose que pour tout s sommet de graphe, on a:
 s.etat = LIBRE
@@ -27,7 +24,6 @@ template <class Graphe, class Sommet>
 class Algos
 {
 public:
-
     static bool estPlusPetitOuEgal(const Sommet * sommet1, const Sommet * sommet2)
     {
         return g(sommet1) <= g(sommet2);
@@ -142,7 +138,7 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
             while(lvTemp)
             {
                 Sommet * v = lvTemp->valeur->first;
-                double coutSversV = graphe->getAreteParSommets(s, v)->distance;
+                double coutSversV = graphe->getAreteParSommets(s, v)->v.getInfoAlgo().c;
                 if(etat(v)==LIBRE)
                 {
                     pere(v) = s;
@@ -160,10 +156,8 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
                         Ouverts = new PElement<Sommet>(v,Ouverts);
                     }
                 }
-
                 lvTemp = lvTemp -> suivant;
             }
-
         }
         return NULL;
     }
@@ -205,9 +199,67 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
 
         while(Ouverts)
         {
-            Sommet  * s =PElement<Sommet>::depiler(Ouverts); etat(s) = FERME;
+            Sommet *s = PElement<Sommet>::depiler(Ouverts);
+            etat(s) = FERME;
 
-            if (estFinal(s)) { PElement<Sommet>::efface1(Ouverts); return s;}
+            if (estFinal(s))
+            {
+                PElement<Sommet>::efface1(Ouverts);
+                return s;
+            }
+
+            PElement<pair<Sommet *, double> > *listeDesVoisins = listeVoisins(s, graphe);
+            PElement<pair<Sommet *, double> > *l;
+
+            for (l = listeDesVoisins; l; l = l->suivant)        // on parcourt les voisins de s
+            {
+                Sommet *v = l->valeur->first;    // v est le voisin courant de s
+
+                double nouveauCout =
+                        c(s) + l->valeur->second;            //l->valeur->second est le coût de l'arête s - v
+
+                if (etat(v) == LIBRE)
+                {
+                    h(v) = hh(v);
+                    miseAJourVoisin(v, s, nouveauCout, Ouverts);
+                } else            // v est Fermé ou Ouvert
+
+                if (nouveauCout < c(v))
+                {
+                    if (etat(v) == OUVERT)
+                        PElement<Sommet>::retire(v, Ouverts);
+
+                    miseAJourVoisin(v, s, nouveauCout, Ouverts);
+
+                }
+            }
+
+            PElement<pair<Sommet *, double> >::efface2(listeDesVoisins);
+        }
+
+        return NULL;
+
+    }
+
+    static Sommet * rechercheCoutUniforme(Graphe & graphe, Sommet * depart, Sommet * cible)
+    {
+        libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
+        PElement<Sommet> * Ouverts;
+
+        c(depart) = 0;
+        etat(depart) = OUVERT;
+        Ouverts = new PElement<Sommet>(depart,NULL);
+
+        while(Ouverts)
+        {
+            Sommet  * s =PElement<Sommet>::depiler(Ouverts);
+            etat(s) = FERME;
+
+            if (cible == s)
+            {
+                PElement<Sommet>::efface1(Ouverts);
+                return s;
+            }
 
             PElement< pair<Sommet*,double> > * listeDesVoisins = listeVoisins(s, graphe);
             PElement< pair<Sommet*,double> > * l;
@@ -216,33 +268,29 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
             {
                 Sommet * v = l->valeur->first;	// v est le voisin courant de s
 
-                double nouveauCout = c(s) + l->valeur->second;			//l->valeur->second est le coût de l'arête s - v
+                //double nouveauCout = c(s) + l->valeur->second;			//l->valeur->second est le coût de l'arête s - v
 
                 if (etat(v) == LIBRE)
                 {
-                    h(v) = hh(v);
-                    miseAJourVoisin( v, s, nouveauCout, Ouverts);
+                    pere(v) = s;
+                    c(v)=c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
+                    etat(v) = OUVERT;
+                    PElement<Sommet>::insertionOrdonnee( v, Ouverts, estPlusPetitOuEgal);
+                    //miseAJourVoisin( v, s, nouveauCout, Ouverts);
                 }
-                else			// v est Fermé ou Ouvert
-
-                if ( nouveauCout < c(v))
+                else if ((etat(v) == OUVERT) &&(c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c < c(v)))
                 {
-                    if (etat(v) == OUVERT)
-                        PElement< Sommet>::retire(v,Ouverts);
-
-                    miseAJourVoisin( v, s, nouveauCout, Ouverts);
-
-                }				// if (nouveauCout < v->c)
-            }			// for
-
-            PElement< pair<Sommet*,double> >::efface2(listeDesVoisins);
-        }	// while (Ouverts)
-
-        return NULL; // échec
-
-    }	// aStar
-
-
+                    pere(v) = s;
+                    c(v)=c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
+                    PElement< Sommet>::retire(v,Ouverts);
+                    PElement<Sommet>::insertionOrdonnee( v, Ouverts, estPlusPetitOuEgal);
+                    //miseAJourVoisin( v, s, nouveauCout, Ouverts);
+                }
+            }
+            PElement< pair<Sommet*,double> >::efface1(listeDesVoisins);
+        }
+        return NULL;
+    }
 
     static void miseAJourVoisin(Sommet * v, Sommet * s, const double & nouveauCout, PElement<Sommet> * & Ouverts)
     {
@@ -251,11 +299,7 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
         g(v) = c(v) + h(v);
         PElement<Sommet>::insertionOrdonnee( v, Ouverts, estPlusPetitOuEgal); etat(v) = OUVERT;
     }
-
-
-
-
-}; // AStarT
+};
 
 /**
 Tâche : Construit sous une forme plus pratique le résultat de l'algo A* et l'algo Dijkstra:
@@ -273,7 +317,7 @@ Le pointeur renvoyé par return pointe donc sur cible.
 HYPOTHESE :
 */
 template <class Sommet>
-PElement<Sommet> * chemin( Sommet * cible, PElement<Sommet> * & debut)
+PElement<Sommet> * chemin(Sommet * cible, PElement<Sommet> * & debut)
 {
     if (!cible) 	// le chemin trouvé est vide (il n'y a donc pas de chemin)
     {
@@ -294,28 +338,27 @@ PElement<Sommet> * chemin( Sommet * cible, PElement<Sommet> * & debut)
     }
 }
 
-static void parcoursDFS(Graphe g,Sommet * sommet)
+static void parcoursDFS(Graphe<VArete, VSommet> &G,Sommet<VSommet> * sommet)
 {
     etat(sommet) = FERME;
-    PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(sommet,g);
+    PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(sommet, G);
     PElement<pair<Sommet<VSommet>*, double>>* v;
     for( v = voisins; v; v = v->suivant)
-        parcoursDFS(g, v->valeur->first);
+        parcoursDFS(G, v->valeur->first);
 }
 
-static bool aUnCircuit(Graphe * g)
+static bool aUnCircuit(Graphe<VArete, VSommet> &G)
 {
 
-    PElement<Arete> * aretes = g->lAretes;
+    PElement<Arete<VArete, VSommet>> * aretes = G.lAretes;
     while (aretes)
     {
-        parcoursDFS(*g,aretes->valeur->fin);
+        parcoursDFS(G, aretes->valeur->fin);
         return etat(aretes->valeur->debut) == OUVERT;
     }
-
 }
 
-static void NumeroteGraphe(const Graphe graphe, const Sommet * s, int numero = 0)
+static void NumeroteGraphe(const Graphe<VArete, VSommet> &graphe, Sommet<VSommet> * s, int numero = 0)
 {
     s->v.infoAlgo.num = numero;
     numero++;
@@ -327,8 +370,19 @@ static void NumeroteGraphe(const Graphe graphe, const Sommet * s, int numero = 0
     }
 }
 
+static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & graphe, Sommet<VSommet> * depart, Sommet<VSommet> * cible)
+{
+    Sommet<VSommet> * resultat;
+    OutilsCarte::cible = cible;
 
+    resultat = Algos<Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(graphe, depart, cible);
 
-
+    if (resultat)
+    {
+        PElement<Sommet<VSommet>> * chem;
+        chemin(cible, chem);
+        return chem;
+    }
+};
 
 #endif //PROJETSFML_PACMAN_ALGOS_H

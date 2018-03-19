@@ -9,14 +9,14 @@ add_executable(Projet_Modelisation
         Graphe/InfoAlgo.h Graphe/InfoAlgo.cpp Graphe/PElement.h Graphe/Sommet.h Graphe/VSommet.h Graphe/VArete.h
         Graphe/OutilsCarte.h Graphe/OutilsCarte.cpp Graphe/VArete.cpp Graphe/VSommet.cpp
 
-        Screen/backgroundRender.h Screen/FenetreSFML.h Screen/FenetreGrapheSFML.h Screen/AlgebreLineaire.h
+        Screen/FenetreGrapheSFML.h Screen/AlgebreLineaire.h
         Screen/Matrice22.h Screen/TransfoAffine2D.h Screen/Vecteur2D.h Screen/Reels.h
 
-        World/board.h World/Thing.h
+        World/board.h
 
         Erreur.h
 
-        World/Thing.cpp Screen/FenetreGrapheSFML.cpp Graphe/Algos.h
+        Screen/FenetreGrapheSFML.cpp Graphe/Algos.h
         GestionFichier/File.h
         )
 # Detect and add SFML

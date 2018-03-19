@@ -20,14 +20,17 @@ bool FenetreGrapheSFML::dessine<VArete, VSommet> (const Arete<VArete, VSommet> *
 }
 
 template<>
-bool FenetreGrapheSFML::changeCouleurChemin (const PElement<Sommet<VSommet>> *chemin, Graphe<VArete, VSommet> &G)
+bool FenetreGrapheSFML::dessineChemin (const PElement<Sommet<VSommet>> *chemin, Graphe<VArete, VSommet> &G)
 {
     while(chemin)
     {
         chemin->valeur->v.setCouleur(sf::Color::Red);
+        dessine(chemin->valeur);
         if(chemin->suivant)
         {
-            G.getAreteParSommets(chemin->valeur, chemin->suivant->valeur)->v.setCouleur(sf::Color::Red);
+            Arete<VArete, VSommet> *arete = G.getAreteParSommets(chemin->valeur, chemin->suivant->valeur);
+            arete->v.setCouleur(sf::Color::Red);
+            dessine(arete);
         }
         chemin = chemin->suivant;
     }

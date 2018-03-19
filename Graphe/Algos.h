@@ -115,9 +115,13 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
     {
         libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
         PElement<Sommet> * Ouverts;
-        while(graphe->lSommets)
+
+        //PElement<Sommet> * listeSommets = listeVoisins(s, graphe);
+        PElement<Sommet> * l;
+
+        for( l = graphe.lSommets; l; l = l->suivant)
         {
-            c(graphe->lSommets->valeur) = -1; // On met tous les couts des sommets du graphe à -1 car on ne connait pas les distances
+            c(l->valeur) = -1; // On met tous les couts des sommets du graphe à -1 car on ne connait pas les distances
         }
         pere(depart) = NULL; // Le père du départ est nul, logique puisque on part du point de départ
         c(depart) = 0; // On met le cout du départ à 0, logique puisque la distance entre le départ et lui même est de 0 km !
@@ -138,7 +142,7 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
             while(lvTemp)
             {
                 Sommet * v = lvTemp->valeur->first;
-                double coutSversV = graphe->getAreteParSommets(s, v)->v.getInfoAlgo().c;
+                double coutSversV = graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
                 if(etat(v)==LIBRE)
                 {
                     pere(v) = s;
@@ -152,7 +156,7 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
                     {
                         pere(v) = s;
                         c(v)= c(s) + coutSversV;
-                        Ouverts->depiler(v);
+                        v = PElement<Sommet>::depiler(Ouverts); //Ouverts.depiler(v);
                         Ouverts = new PElement<Sommet>(v,Ouverts);
                     }
                 }
@@ -185,10 +189,7 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
 
 */
 
-    static Sommet * aStar(Graphe & graphe, Sommet * depart,
-                          double (*hh)(const Sommet * s)/*,
-			PElement< pair<Sommet*,double> > * (*listeVoisins)(const Sommet * s, const Graphe & graphe),
-			void (*libereToutSommet)(Graphe & graphe)*/)
+    static Sommet * aStar(Graphe & graphe, Sommet * depart, double (*hh)(const Sommet * s))
     {
         libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
         PElement<Sommet> * Ouverts;
@@ -234,14 +235,14 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
                 }
             }
 
-            PElement<pair<Sommet *, double> >::efface2(listeDesVoisins);
+            PElement<pair<Sommet *, double> >::efface1(listeDesVoisins);
         }
 
         return NULL;
 
     }
 
-    static Sommet * rechercheCoutUniforme(Graphe & graphe, Sommet * depart, Sommet * cible)
+    static Sommet * rechercheCoutUniforme(Graphe & graphe, Sommet * depart)
     {
         libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
         PElement<Sommet> * Ouverts;
@@ -255,7 +256,7 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
             Sommet  * s =PElement<Sommet>::depiler(Ouverts);
             etat(s) = FERME;
 
-            if (cible == s)
+            if (estFinal(s))
             {
                 PElement<Sommet>::efface1(Ouverts);
                 return s;
@@ -268,23 +269,16 @@ bool estFinal(const Sommet * s) est une méthode indiquant si le sommet correspo
             {
                 Sommet * v = l->valeur->first;	// v est le voisin courant de s
 
-                //double nouveauCout = c(s) + l->valeur->second;			//l->valeur->second est le coût de l'arête s - v
+                double nouveauCout = c(s) + l->valeur->second;			//l->valeur->second est le coût de l'arête s - v
 
                 if (etat(v) == LIBRE)
                 {
-                    pere(v) = s;
-                    c(v)=c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
-                    etat(v) = OUVERT;
-                    PElement<Sommet>::insertionOrdonnee( v, Ouverts, estPlusPetitOuEgal);
-                    //miseAJourVoisin( v, s, nouveauCout, Ouverts);
+                    miseAJourVoisin( v, s, nouveauCout, Ouverts);
                 }
-                else if ((etat(v) == OUVERT) &&(c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c < c(v)))
+                else if ((etat(v) == OUVERT) &&(nouveauCout < c(v)))
                 {
-                    pere(v) = s;
-                    c(v)=c(s)+graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
                     PElement< Sommet>::retire(v,Ouverts);
-                    PElement<Sommet>::insertionOrdonnee( v, Ouverts, estPlusPetitOuEgal);
-                    //miseAJourVoisin( v, s, nouveauCout, Ouverts);
+                    miseAJourVoisin( v, s, nouveauCout, Ouverts);
                 }
             }
             PElement< pair<Sommet*,double> >::efface1(listeDesVoisins);
@@ -372,17 +366,19 @@ static void NumeroteGraphe(const Graphe<VArete, VSommet> &graphe, Sommet<VSommet
 
 static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & graphe, Sommet<VSommet> * depart, Sommet<VSommet> * cible)
 {
-    Sommet<VSommet> * resultat;
+    Sommet<VSommet> *resultat;
     OutilsCarte::cible = cible;
 
-    resultat = Algos<Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(graphe, depart, cible);
+    resultat = Algos<Graphe<VArete, VSommet>, Sommet<VSommet> >::rechercheCoutUniforme(graphe, depart);
 
     if (resultat)
     {
-        PElement<Sommet<VSommet>> * chem;
+        PElement<Sommet<VSommet>> *chem;
         chemin(cible, chem);
+        cout << chem << endl;
         return chem;
     }
+}
 
     /**
  * Vérifie la présence d'un chemin entre un sommet A et un sommet B. NE DOIT PAS ÊTRE APPELEE EN DEHORS DE EXISTEUNCHEMIN
@@ -391,7 +387,7 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
  * @param B
  * @return
  */
-    static bool _ExisteUnChemin(const Graphe &graphe, Sommet * A, Sommet * B)
+    static bool _ExisteUnChemin(const Graphe<VArete,VSommet> &graphe, Sommet<VSommet> * A, Sommet<VSommet> * B)
     {
         if (A == B) return true;
         etat(A) = FERME;
@@ -405,7 +401,6 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
             }
         }
         return false;
-
     }
 /**
  * Initialise les sommets avant l'appel à _ExisteUnChemin
@@ -414,13 +409,14 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
  * @param B
  * @return
  */
-    static bool ExisteUnChemin(Graphe &graphe, Sommet * A, Sommet * B)
+    static bool ExisteUnChemin(Graphe<VArete,VSommet> &graphe, Sommet<VSommet> * A, Sommet<VSommet> * B)
     {
         libereToutSommet(graphe);
         return _ExisteUnChemin(graphe,A,B);
     }
 
-    double _getDiametre(Graphe &graphe, Sommet * s, double resultat = c(s)) {
+    double _getDiametre(Graphe<VArete,VSommet> &graphe, Sommet<VSommet> * s, double resultat = 0) {
+        resultat = c(s);
         etat(s) = FERME;
         PElement<pair<Sommet<VSommet> *, double>> *voisins = listeVoisins(s, graphe);
         PElement<pair<Sommet<VSommet> *, double>> *v;
@@ -432,13 +428,11 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
         return resultat;
     }
 
-
-    static double getDiametre(Graphe &graphe, Sommet * s)
+    static double getDiametre(Graphe<VArete,VSommet> &graphe, Sommet<VSommet> * s)
     {
         libereToutSommet(graphe);
         return  _getDiametre(graphe,s);
-
     }
-};
+
 
 #endif //PROJETSFML_PACMAN_ALGOS_H

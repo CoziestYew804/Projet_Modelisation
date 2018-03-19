@@ -151,7 +151,7 @@ On suppose que les coordonnï¿½es des sommets sont dï¿½finies par rapport au repï
     */
 
     template <class S, class T>
-    bool changeCouleurChemin(const PElement<Sommet<T>> * chemin, Graphe<S, T> &G);
+    bool dessineChemin(const PElement<Sommet<T>> * chemin, Graphe<S, T> &G);
 };
 
 

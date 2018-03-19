@@ -90,38 +90,28 @@ public:
                         string ch = line.substr(k, j - k + 1);
                         subArray.push_back(ch);
                     }
-
-
                 }
                 if(subArray.size()>0)
                 {
-                    subArray[0].erase(std::remove(subArray[0].begin(), subArray[0].end(), '\r'),
-                                      subArray[0].end());
-                    cout<<subArray[0]<<endl;
-                    cout<<subArray[0].size()<<endl;
-                    cout<< !subArray[0].compare("sectionSommets")<<endl;
+                    subArray[0].erase(std::remove(subArray[0].begin(), subArray[0].end(), '\r'), subArray[0].end());
                     if (!subArray[0].compare("sectionSommets")) {
                         B.pSommet.first = B.fichierLignes;
                         cout << subArray[0] << endl;
-                        cout << "je l'ai le section sommet" << endl;
                     }
                     if (!subArray[0].compare("sources")) {
                         B.pSommet.second = B.fichierLignes - 2;
                         cout<<subArray[0]<<endl;
-                        cout << "je l'ai le section source" << endl;
                     }
 
                     if (!subArray[0].compare("sectionArcs")) {
                         pArcs.first = B.fichierLignes + 1;
                         cout <<  "arc debut"<< subArray[0] << endl;
                         cout<< B.fichierLignes<<endl;
-                        cout << "je l'ai le section arcs" << endl;
                     }
                     if (!subArray[0].compare("sectionGraphes")) {
                         pArcs.second = B.fichierLignes - 2;
                         cout << "arc final"<< subArray[0] << endl;
                         cout<< B.fichierLignes<<endl;
-                        cout << "je l'ai le section graphe" << endl;
                     }
                 }
                 B.fichierLignes++;
@@ -164,11 +154,8 @@ public:
                         }
 
                     }
-
-                    cout << "taille "<< subArray.size()<<endl;
                     int max=(pSommet.first-ligne)*-1;
                     B.listeSommet[subArray[0]]=B.graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5),subArray[0],stoi(subArray[2]),stoi(subArray[4])));
-                    cout<<"le nom du bordSup : " <<subArray[2]<<endl;
 
                     B.sommets.push_back(B.listeSommet[subArray[0]]);
                 }

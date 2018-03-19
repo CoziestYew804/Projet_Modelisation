@@ -4,13 +4,8 @@
 
 #include "VArete.h"
 
-VArete::VArete (string nom, int duree, int c, sf::Color couleur):duree(duree), couleur(couleur), infoAlgo(c), nom(nom)
-{
-
-    //VArete::couleur = couleur;
-    //infoAlgo.c = c;
-    //cout << "Cout : " << infoAlgo.c << endl;
-}
+VArete::VArete (string nom, int duree, int c, sf::Color couleur):duree(duree), couleur(couleur), infoAlgo(0, c), nom(nom)
+{}
 
 VArete::~VArete ()
 = default;

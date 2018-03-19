@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include "Graphe/Graphe.h"
-#include "Screen/Vecteur2D.h"
 #include "World/board.h"
 #include "Screen/FenetreGrapheSFML.h"
 #include "GestionFichier/File.h"
@@ -25,9 +24,14 @@ int main()
     //cout << B.graphe << endl;
     //cout << B.aretes[1] << endl;
 
-
-    //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0],B.sommets[5]);
-    window.changeCouleurChemin(TriTopologique(B.graphe, B.sommets[0], B.sommets[20]), B.graphe);
+    //cout << B.graphe << endl;
+    Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0]);
+    //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra(B.graphe, B.sommets[0]);
+    PElement<Sommet<VSommet>>* ch;
+    chemin(B.sommets[9], ch);
+    cout << ch << endl;
+    window.dessineChemin(ch, B.graphe);
+    //cout << B.graphe << endl;
     B.graphe.dessine(window);
     window.fenetre.display();
 
@@ -50,6 +54,7 @@ int main()
 
                 window.fenetre.clear();
                 B.graphe.dessine(window);
+                window.dessineChemin(ch, B.graphe);
                 window.fenetre.display();
             }
             if(event.type == sf::Event::MouseWheelScrolled)
@@ -62,6 +67,7 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
                 else if (event.mouseWheelScroll.delta == -1)
@@ -72,6 +78,7 @@ int main()
                     window.fenetre.setView(window.fenetre.getDefaultView());
                     window.fenetre.clear();
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
             }
@@ -86,6 +93,7 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
 
@@ -97,6 +105,7 @@ int main()
                     window.fenetre.setView(window.fenetre.getDefaultView());
                     window.fenetre.clear();
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
 
@@ -108,6 +117,7 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
                 if (event.key.code == sf::Keyboard::Up)
@@ -118,6 +128,7 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
                 if (event.key.code == sf::Keyboard::Down)
@@ -128,6 +139,7 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
                 if (event.key.code == sf::Keyboard::S)
@@ -143,9 +155,9 @@ int main()
                     window.fenetre.clear();
                     window.fenetre.setView(view);
                     B.graphe.dessine(window);
+                    window.dessineChemin(ch, B.graphe);
                     window.fenetre.display();
                 }
-
             }
         }
     }

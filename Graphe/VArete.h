@@ -23,7 +23,6 @@ public:
     string nom;
     VArete (string nom,int duree, int c, sf::Color couleur = sf::Color::Cyan);
     virtual ~VArete ();
-    //VArete (const VArete &va);
 
     explicit operator string () const;
 

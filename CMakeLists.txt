@@ -18,7 +18,7 @@ add_executable(Projet_Modelisation
 
         Screen/FenetreGrapheSFML.cpp Graphe/Algos.h
         GestionFichier/File.h
-        )
+        Screen/Menu.h)
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
 find_package(SFML REQUIRED system window graphics network audio)

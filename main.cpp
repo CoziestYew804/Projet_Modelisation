@@ -4,6 +4,7 @@
 #include "Screen/FenetreGrapheSFML.h"
 #include "GestionFichier/File.h"
 #include "Graphe/Algos.h"
+#include "Screen/Menu.h"
 
 
 using namespace std;
@@ -13,28 +14,31 @@ using namespace sf;
 int main()
 {
     board B;
-    File::Read(B);
+    //File::Read(B);
+    Menu::MenuPrincipal(B);
     Vecteur2D coinBG(-0.5, ((B.listeSommet.size()-1)%5)+0.5);
     Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -1);
     FenetreGrapheSFML window("Graphe !", coinBG, coinHD,1920,1080);
     sf::View view(sf::FloatRect(0,0,1920,1080));
 
 // on l'active
+
     window.fenetre.setView(view);
+    B.graphe.dessine(window);
     //cout << B.graphe << endl;
     //cout << B.aretes[1] << endl;
 
     //cout << B.graphe << endl;
-    Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0]);
+    //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0]);
     //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra(B.graphe, B.sommets[0]);
     PElement<Sommet<VSommet>>* ch;
-    chemin(B.sommets[9], ch);
+    chemin(B.sommets[8], ch);
     cout << ch << endl;
     window.dessineChemin(ch, B.graphe);
     //cout << B.graphe << endl;
-    B.graphe.dessine(window);
-    window.fenetre.display();
 
+    window.fenetre.display();
+    B.graphe.dessine(window);
 
     while (window.fenetre.isOpen())
     {

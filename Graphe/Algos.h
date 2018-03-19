@@ -26,6 +26,7 @@ suppose que les fonctions coût et  h sont toujours >= 0
 template <class Graphe, class Sommet>
 class Algos
 {
+
 public:
 
     static bool estPlusPetitOuEgal(const Sommet * sommet1, const Sommet * sommet2)
@@ -326,8 +327,61 @@ static void NumeroteGraphe(const Graphe graphe, const Sommet * s, int numero = 0
         if (!(v->valeur->first->v.getInfoAlgo().num)) NumeroteGraphe(graphe,v->valeur->first,numero);
     }
 }
+/**
+ * Vérifie la présence d'un chemin entre un sommet A et un sommet B. NE DOIT PAS ÊTRE APPELEE EN DEHORS DE EXISTEUNCHEMIN
+ * @param graphe
+ * @param A
+ * @param B
+ * @return
+ */
+static bool _ExisteUnChemin(const Graphe &graphe, Sommet * A, Sommet * B)
+{
+    if (A == B) return true;
+    etat(A) = FERME;
+    PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(A,graphe);
+    PElement<pair<Sommet<VSommet>*, double>>* v;
+    for( v = voisins; v; v = v->suivant)
+    {
+        if(v->valeur->first->v.getInfoAlgo().etat == OUVERT)
+        {
+            return _ExisteUnChemin(graphe, v->valeur->first, B);
+        }
+    }
+    return false;
+
+}
+/**
+ * Initialise les sommets avant l'appel à _ExisteUnChemin
+ * @param graphe
+ * @param A
+ * @param B
+ * @return
+ */
+static bool ExisteUnChemin(Graphe &graphe, Sommet * A, Sommet * B)
+{
+    libereToutSommet(graphe);
+    return _ExisteUnChemin(graphe,A,B);
+}
+
+double _getDiametre(Graphe &graphe, Sommet * s, double resultat = c(s)) {
+    etat(s) = FERME;
+    PElement<pair<Sommet<VSommet> *, double>> *voisins = listeVoisins(s, graphe);
+    PElement<pair<Sommet<VSommet> *, double>> *v;
+    for (v = voisins; v; v = v->suivant) {
+        if (v->valeur->first->v.getInfoAlgo().etat == OUVERT && c(v->valeur->first) > resultat) {
+            resultat = _getDiametre(graphe, v->valeur->first, c(v->valeur->first));
+        }
+    }
+    return resultat;
+}
 
 
+static double getDiametre(Graphe &graphe, Sommet * s)
+{
+    libereToutSommet(graphe);
+    return  _getDiametre(graphe,s);
+
+}
 
 
 

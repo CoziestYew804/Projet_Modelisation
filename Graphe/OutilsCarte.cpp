@@ -84,6 +84,16 @@ return sommet->v.infoAlgo.g;
 return sommet->v.infoAlgo.g;
 }
 
+/*static*/ int OutilsCarte::num( const Sommet<VSommet> *sommet)
+{
+    return sommet->v.infoAlgo.num;
+}
+
+/*static*/ int & OutilsCarte::num( Sommet<VSommet> *sommet)
+{
+    return sommet->v.infoAlgo.num;
+}
+
 /*static*/ bool OutilsCarte::estFinal(const Sommet<VSommet> * sommet)
 {
 return sommet == cible;
@@ -98,47 +108,57 @@ return sommet == cible;
 
 void libereToutSommet(Graphe<VArete, VSommet> & graphe)
 {
-return OutilsCarte::libereToutSommet(graphe);
+    return OutilsCarte::libereToutSommet(graphe);
 }
 
 PElement< pair<Sommet<VSommet>*,double> > * listeVoisins(const Sommet<VSommet> * s, const Graphe<VArete, VSommet> & graphe)
 {
-return OutilsCarte::listeVoisins(s,graphe);
+    return OutilsCarte::listeVoisins(s,graphe);
 }
 
 Sommet<VSommet> *  pere( const Sommet<VSommet> * sommet)
 {
-return OutilsCarte::pere(sommet);
+    return OutilsCarte::pere(sommet);
 }
 
 Sommet<VSommet> * & pere( Sommet<VSommet> * sommet)
 {
-return OutilsCarte::pere(sommet);
+    return OutilsCarte::pere(sommet);
 }
 
 int & etat( Sommet<VSommet> * sommet)
 {
-return OutilsCarte::etat(sommet);
+    return OutilsCarte::etat(sommet);
 }
 
 double & c( Sommet<VSommet> * sommet)
 {
-return OutilsCarte::c(sommet);
+    return OutilsCarte::c(sommet);
 }
 
 double & h( Sommet<VSommet> * sommet)
 {
-return OutilsCarte::h(sommet);
+    return OutilsCarte::h(sommet);
 }
 
 double g( const Sommet<VSommet> * sommet)
 {
-return OutilsCarte::g(sommet);
+    return OutilsCarte::g(sommet);
 }
 
 double & g( Sommet<VSommet> * sommet)
 {
-return OutilsCarte::g(sommet);
+    return OutilsCarte::g(sommet);
+}
+
+int num( const Sommet<VSommet> * sommet)
+{
+    return OutilsCarte::num(sommet);
+}
+
+int & num( Sommet<VSommet> * sommet)
+{
+    return OutilsCarte::num(sommet);
 }
 
 

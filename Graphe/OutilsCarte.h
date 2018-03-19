@@ -53,6 +53,8 @@ static double & c( Sommet<VSommet> * sommet);
 static double & h( Sommet<VSommet> * sommet);
 static double g( const Sommet<VSommet> * sommet);
 static double & g( Sommet<VSommet> * sommet);
+static int num(const Sommet<VSommet> * sommet);
+static int & num(Sommet<VSommet> * sommet);
 
 static bool estFinal(const Sommet<VSommet> * sommet);
 
@@ -69,6 +71,8 @@ double & c( Sommet<VSommet> * sommet);
 double & h( Sommet<VSommet> * sommet);
 double g( const Sommet<VSommet> * sommet);
 double & g( Sommet<VSommet> * sommet);
+static int num(const Sommet<VSommet> * sommet);
+static int & num(Sommet<VSommet> * sommet);
 
 bool estFinal(const Sommet<VSommet> * sommet);
 

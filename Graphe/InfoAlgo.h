@@ -32,10 +32,11 @@ int etat;		// LIBRE, OUVERT ou FERMé
 double c;		// coût déjà calculé. cf. A* ou Dijkstra
 double h;		// estimation heuristique. cf. A*
 double g;		// coût total : g = h+c
+int num;
 
     explicit InfoAlgo (const double & c = 0, AElement *pere = nullptr, const int etat = LIBRE,
                          const double & h = 0, const double & g = 0) :
-		   	pere(pere), etat(etat), c(c), h(h), g(g) { cout<<"je suis dans l'arrete et c =" << c <<endl;}
+		   	pere(pere), etat(etat), c(c), h(h), g(g), num(0) { cout<<"je suis dans l'arrete et c =" << c <<endl;}
 
     explicit operator string () const;
 

@@ -315,6 +315,17 @@ static bool aUnCircuit(Graphe * g)
 
 }
 
+static void NumeroteGraphe(const Graphe graphe, const Sommet * s, int numero = 0)
+{
+    s->v.infoAlgo.num = numero;
+    numero++;
+    PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(s,graphe);
+    PElement<pair<Sommet<VSommet>*, double>>* v;
+    for( v = voisins; v; v = v->suivant)
+    {
+        if (!(v->valeur->first->v.getInfoAlgo().num)) NumeroteGraphe(graphe,v->valeur->first,numero);
+    }
+}
 
 
 

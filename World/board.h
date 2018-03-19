@@ -106,7 +106,7 @@ public:
     void ExtractionSommet( pair<int,int>  pSommet, string input ) {
 
         ifstream fichier("Graphe files/" + input+".gpr", ios::in);
-
+        int num = 0;
         string line;
         int ligne = 0;
         int tempX,tempY;
@@ -134,6 +134,7 @@ public:
 
                     int max=(pSommet.first-ligne)*-1;
                     listeSommet[subArray[0]]=graphe.creeSommet(VSommet(Vecteur2D(max/5, max%5),subArray[0],stoi(subArray[2]),stoi(subArray[4])));
+                    listeSommet[subArray[0]]->v.getInfoAlgo().num = ++num;
                     cout<<"le nom du bordSup : " <<subArray[2]<<endl;
 
                     sommets.push_back(listeSommet[subArray[0]]);

@@ -136,7 +136,7 @@ public:
             } else {
                 switch (choix) {
                     case 0:
-                        return;
+                        exit (EXIT_SUCCESS);
                     case 9:
                     {
                         File::Save(B);

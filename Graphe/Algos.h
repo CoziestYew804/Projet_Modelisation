@@ -479,48 +479,7 @@ static void  TriTopologique(Graphe<VArete, VSommet> & graphe,  vector<Sommet<VSo
         libereToutSommet(graphe);
         return  _getDiametre(graphe,s);
     }
-/*static bool isCyclicUtil(int v, bool visited[], bool *recStack,vector<vector<int>> adj)
-{
-    if(visited[v] == false)
-    {
-        //marque le sommet courant comme marquee et a ete part de la recursivite
-        visited[v] = true;
-        recStack[v] = true;
 
-        //parcours pour tous les sommets leur voisins
-        vector<int>::iterator i;
-        for(i = adj[v].begin(); i != adj[v].end(); ++i)
-        {
-            if ( !visited[*i] && isCyclicUtil(*i, visited, recStack,adj) )
-                return true;
-            else if (recStack[*i])
-                return true;
-        }
-
-    }
-    recStack[v] = false;  // remove the vertex from recursion stack
-    return false;
-}
-static bool isCyclic(int V,vector<vector<int>> adj)
-{
-    // Marque tous les sommet comme non marques et ont pas participe a la recursion
-    // stack
-    bool *visited = new bool[V];
-    bool *recStack = new bool[V];
-    for(int i = 0; i < V; i++)
-    {
-        visited[i] = false;
-        recStack[i] = false;
-    }
-
-    // appelle la fonction recursive afin de checker dans les differents
-    // arbres DFS
-    for(int i = 0; i < V; i++)
-        if (isCyclicUtil(i, visited, recStack,adj))
-            return true;
-
-    return false;
-}*/
 
 
 

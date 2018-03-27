@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <map>
+#include <list>
 
 class board
 {

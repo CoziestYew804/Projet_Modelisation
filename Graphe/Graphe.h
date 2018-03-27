@@ -15,6 +15,7 @@ Celle-ci définit à tout instant la clef qui sera attribuée au prochain élém
 */
 
 #include <utility>
+#include <list>
 #include "PElement.h"
 #include "../Erreur.h"
 #include "Sommet.h"
@@ -37,6 +38,9 @@ class Graphe
         int prochaineClef;
     private:
     bool estPossibleDjikstra=true;
+
+
+
 
 
 
@@ -119,6 +123,53 @@ class Graphe
     void effaceTout();
 
     public:
+
+    list<int> *adj;
+    int V;
+
+    // This function is a variation of DFSUytil() in https://www.geeksforgeeks.org/archives/18212
+     bool isCyclicUtil(int v, bool visited[], bool *recStack)
+    {
+        if(visited[v] == false)
+        {
+            // Mark the current node as visited and part of recursion stack
+            visited[v] = true;
+            recStack[v] = true;
+
+            // Recur for all the vertices adjacent to this vertex
+            list<int>::iterator i;
+            for(i = adj[v].begin(); i != adj[v].end(); ++i)
+            {
+                if ( !visited[*i] && isCyclicUtil(*i, visited, recStack) )
+                    return true;
+                else if (recStack[*i])
+                    return true;
+            }
+
+        }
+        recStack[v] = false;  // remove the vertex from recursion stack
+        return false;
+    }
+     bool isCyclic()
+    {
+        // Mark all the vertices as not visited and not part of recursion
+        // stack
+        bool *visited = new bool[V];
+        bool *recStack = new bool[V];
+        for(int i = 0; i < V; i++)
+        {
+            visited[i] = false;
+            recStack[i] = false;
+        }
+
+        // Call the recursive helper function to detect cycle in different
+        // DFS trees
+        for(int i = 0; i < V; i++)
+            if (isCyclicUtil(i, visited, recStack))
+                return true;
+
+        return false;
+    }
     void setEstPossibleDjikstra(const bool val){
         estPossibleDjikstra=val;
     }

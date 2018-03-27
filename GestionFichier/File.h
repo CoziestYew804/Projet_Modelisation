@@ -145,6 +145,8 @@ public:
                 }
                 B.fichierLignes++;
             }
+            B.graphe.V=B.pSommet.second-B.pSommet.first;
+            B.graphe.adj=new list<int>[B.graphe.V];
             fichier.close();
         }
         else
@@ -253,7 +255,7 @@ public:
                     if(stoi(subArray[6])<0){B.graphe.setEstPossibleDjikstra(false);}
                     //cout <<  stoi(subArray[2].substr(1))<<endl;
                     //cout << subArray[4].substr(1)<<endl;
-                    //B.adj[stoi(subArray[2].substr(1))].push_back(stoi(subArray[4].substr(1)));
+                    B.graphe.adj[stoi(subArray[2].substr(1))-1].push_back(stoi(subArray[4].substr(1))-1);
                 }
                 ligne++;
             }

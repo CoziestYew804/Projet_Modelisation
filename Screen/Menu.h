@@ -80,15 +80,18 @@ public:
             case 6:
             {
                 cout << "Tri topologique ;" << endl;
-
-                vector<Sommet<VSommet>*> tri;
-                PElement<Sommet<VSommet>> *ls = B.graphe.lSommets;
-                while(ls!=NULL){
-                    tri.push_back(ls->valeur);
-                    ls=ls->suivant;
+                if(!B.graphe.isCyclic()) {
+                    vector<Sommet<VSommet> *> tri;
+                    PElement<Sommet<VSommet>> *ls = B.graphe.lSommets;
+                    while (ls != NULL) {
+                        tri.push_back(ls->valeur);
+                        ls = ls->suivant;
+                    }
+                    TriTopologique(B.graphe, tri, B.aretes);
                 }
-                TriTopologique(B.graphe,tri,B.aretes);
-
+                else{
+                    cerr<< " le graphe a un cycle il n'est donc pas possible d'effectuer le tri topologique"<<endl;
+                }
                 break;
             }
 

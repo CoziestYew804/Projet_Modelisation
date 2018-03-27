@@ -16,8 +16,9 @@ int main()
     board B;
     //File::Read(B);
     Menu::MenuPrincipal(B);
+
     Vecteur2D coinBG(-0.5, ((B.listeSommet.size()-1)%5)+0.5);
-    Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -1);
+    Vecteur2D coinHD(((B.listeSommet.size()-1)/5), -0.5);
     FenetreGrapheSFML window("Graphe !", coinBG, coinHD,1920,1080);
     sf::View view(sf::FloatRect(0,0,1920,1080));
 
@@ -32,9 +33,9 @@ int main()
     //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::rechercheCoutUniforme(B.graphe, B.sommets[0]);
     //Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra(B.graphe, B.sommets[0]);
     PElement<Sommet<VSommet>>* ch;
-    chemin(B.sommets[8], ch);
-    cout << ch << endl;
-    window.dessineChemin(ch, B.graphe);
+    chemin(OutilsCarte::cible, ch);
+    //cout << ch << endl;
+    //window.dessineChemin(ch, B.graphe);
     //cout << B.graphe << endl;
 
     window.fenetre.display();

@@ -12,6 +12,7 @@
 
 #include"PElement.h"
 #include "OutilsCarte.h"
+#include "Arete.h"
 
 /**
 suppose que pour tout s sommet de graphe, on a:
@@ -113,57 +114,54 @@ hh est l'heuristique à appliquer entre 2 sommets quelconques du graphe
  */
     static Sommet * Djikstra(Graphe & graphe, Sommet * depart)
     {
-        libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
-        PElement<Sommet> * Ouverts;
+        if(graphe.getEstPossibleDjikstra()) {
+            libereToutSommet(graphe); // met tous les sommets du graphe à LIBRE et tous les liens-pere à NULL
+            PElement<Sommet> *Ouverts;
 
-        //PElement<Sommet> * listeSommets = listeVoisins(s, graphe);
-        PElement<Sommet> * l;
+            //PElement<Sommet> * listeSommets = listeVoisins(s, graphe);
+            PElement<Sommet> *l;
 
-        for( l = graphe.lSommets; l; l = l->suivant)
-        {
-            c(l->valeur) = -1; // On met tous les couts des sommets du graphe à -1 car on ne connait pas les distances
-        }
-        pere(depart) = NULL; // Le père du départ est nul, logique puisque on part du point de départ
-        c(depart) = 0; // On met le cout du départ à 0, logique puisque la distance entre le départ et lui même est de 0 km !
-
-        Ouverts = new PElement<Sommet>(depart,NULL);
-        etat(depart) = OUVERT; //
-
-        while(Ouverts)
-        {
-            Sommet  * s =PElement<Sommet>::depiler(Ouverts);
-            etat(s) = FERME;
-
-            if(estFinal(s)) return s;
-
-            PElement< pair<Sommet*,double> > * listeDesVoisins = listeVoisins(s, graphe);
-            PElement< pair<Sommet*,double> > * lvTemp = listeDesVoisins;
-
-            while(lvTemp)
-            {
-                Sommet * v = lvTemp->valeur->first;
-                double coutSversV = graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
-                if(etat(v)==LIBRE)
-                {
-                    pere(v) = s;
-                    c(v) = c(s) + coutSversV;
-                    etat(v) = OUVERT;
-                    Ouverts = new PElement<Sommet>(v,Ouverts);
-                }
-                else
-                {
-                    if(etat(v) == OUVERT && c(s) < (coutSversV + c(v)))
-                    {
-                        pere(v) = s;
-                        c(v)= c(s) + coutSversV;
-                        v = PElement<Sommet>::depiler(Ouverts); //Ouverts.depiler(v);
-                        Ouverts = new PElement<Sommet>(v,Ouverts);
-                    }
-                }
-                lvTemp = lvTemp -> suivant;
+            for (l = graphe.lSommets; l; l = l->suivant) {
+                c(l->valeur) = -1; // On met tous les couts des sommets du graphe à -1 car on ne connait pas les distances
             }
+            pere(depart) = NULL; // Le père du départ est nul, logique puisque on part du point de départ
+            c(depart) = 0; // On met le cout du départ à 0, logique puisque la distance entre le départ et lui même est de 0 km !
+
+            Ouverts = new PElement<Sommet>(depart, NULL);
+            etat(depart) = OUVERT; //
+
+            while (Ouverts) {
+                Sommet *s = PElement<Sommet>::depiler(Ouverts);
+                etat(s) = FERME;
+
+                if (estFinal(s)) return s;
+
+                PElement<pair<Sommet *, double> > *listeDesVoisins = listeVoisins(s, graphe);
+                PElement<pair<Sommet *, double> > *lvTemp = listeDesVoisins;
+
+                while (lvTemp) {
+                    Sommet *v = lvTemp->valeur->first;
+                    double coutSversV = graphe.getAreteParSommets(s, v)->v.getInfoAlgo().c;
+                    if (etat(v) == LIBRE) {
+                        pere(v) = s;
+                        c(v) = c(s) + coutSversV;
+                        etat(v) = OUVERT;
+                        Ouverts = new PElement<Sommet>(v, Ouverts);
+                    } else {
+                        if (etat(v) == OUVERT && c(s) < (coutSversV + c(v))) {
+                            pere(v) = s;
+                            c(v) = c(s) + coutSversV;
+                            v = PElement<Sommet>::depiler(Ouverts); //Ouverts.depiler(v);
+                            Ouverts = new PElement<Sommet>(v, Ouverts);
+                        }
+                    }
+                    lvTemp = lvTemp->suivant;
+                }
+            }
+            return NULL;
+        }else{
+            cerr<<"ce graphe compte une arrete de poids negatif, djikstra ne peut etre calcule"<<endl;
         }
-        return NULL;
     }
 /**
 
@@ -335,10 +333,14 @@ PElement<Sommet> * chemin(Sommet * cible, PElement<Sommet> * & debut)
 static void parcoursDFS(Graphe<VArete, VSommet> &G,Sommet<VSommet> * sommet)
 {
     etat(sommet) = FERME;
+    cout<< sommet->v.nom<<" -> ";
     PElement<pair<Sommet<VSommet>*, double>>* voisins = listeVoisins(sommet, G);
     PElement<pair<Sommet<VSommet>*, double>>* v;
-    for( v = voisins; v; v = v->suivant)
-        parcoursDFS(G, v->valeur->first);
+    for( v = voisins; v; v = v->suivant) {
+        if (etat(v->valeur->first) != FERME)
+            parcoursDFS(G, v->valeur->first);
+    }
+
 }
 
 static bool aUnCircuit(Graphe<VArete, VSommet> &G)
@@ -364,9 +366,9 @@ static void NumeroteGraphe(const Graphe<VArete, VSommet> &graphe, Sommet<VSommet
     }
 }
 
-static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & graphe, Sommet<VSommet> * depart, Sommet<VSommet> * cible)
+static void  TriTopologique(Graphe<VArete, VSommet> & graphe,  vector<Sommet<VSommet>*> tri,vector<Arete<VArete, VSommet> *> lAretes)
 {
-    Sommet<VSommet> *resultat;
+    /*Sommet<VSommet> *resultat;
     OutilsCarte::cible = cible;
 
     resultat = Algos<Graphe<VArete, VSommet>, Sommet<VSommet> >::rechercheCoutUniforme(graphe, depart);
@@ -375,9 +377,53 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
     {
         PElement<Sommet<VSommet>> *chem;
         chemin(cible, chem);
-        cout << chem << endl;
+        cout << chem->valeur->v << endl;
         return chem;
+    }*/
+
+        vector<Sommet<VSommet>*> temp1;
+    Sommet<VSommet> *temp;
+    for (int i=0;i <= tri.size() ;i++)
+    {
+                //topo->insertionOrdonnee(ls->valeur, topo, estPlusPetitouEgal);
+
+                bool aUnPere=false;
+
+                for(Arete<VArete, VSommet> * a : lAretes) // Problem part
+                {
+                    if(a->fin==tri[i]) {
+                        if(std::find(tri.begin(), tri.end(), a->debut) != tri.end()){
+                            aUnPere=true;
+                        }
+                    }
+                }
+                if(!aUnPere) {
+                    cout << tri[i]->v.nom << " , ";
+                    temp = tri[i];
+                    i = tri.size()+1;
+                }
+
+
+                    //remove(tri.begin(), tri.end(), tri[i])}
+
+
     }
+
+    for(int j=0;j<tri.size();j++){
+
+        if(tri[j]!=temp) {
+            temp1.push_back(tri[j]);
+        }
+    }
+
+    if(temp1.size()>0){
+    TriTopologique(graphe,temp1,lAretes);
+
+    }
+
+
+
+
 }
 
     /**
@@ -433,6 +479,49 @@ static PElement<Sommet<VSommet>> * TriTopologique(Graphe<VArete, VSommet> & grap
         libereToutSommet(graphe);
         return  _getDiametre(graphe,s);
     }
+/*static bool isCyclicUtil(int v, bool visited[], bool *recStack,vector<vector<int>> adj)
+{
+    if(visited[v] == false)
+    {
+        //marque le sommet courant comme marquee et a ete part de la recursivite
+        visited[v] = true;
+        recStack[v] = true;
+
+        //parcours pour tous les sommets leur voisins
+        vector<int>::iterator i;
+        for(i = adj[v].begin(); i != adj[v].end(); ++i)
+        {
+            if ( !visited[*i] && isCyclicUtil(*i, visited, recStack,adj) )
+                return true;
+            else if (recStack[*i])
+                return true;
+        }
+
+    }
+    recStack[v] = false;  // remove the vertex from recursion stack
+    return false;
+}
+static bool isCyclic(int V,vector<vector<int>> adj)
+{
+    // Marque tous les sommet comme non marques et ont pas participe a la recursion
+    // stack
+    bool *visited = new bool[V];
+    bool *recStack = new bool[V];
+    for(int i = 0; i < V; i++)
+    {
+        visited[i] = false;
+        recStack[i] = false;
+    }
+
+    // appelle la fonction recursive afin de checker dans les differents
+    // arbres DFS
+    for(int i = 0; i < V; i++)
+        if (isCyclicUtil(i, visited, recStack,adj))
+            return true;
+
+    return false;
+}*/
+
 
 
 #endif //PROJETSFML_PACMAN_ALGOS_H

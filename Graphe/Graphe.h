@@ -36,6 +36,9 @@ class Graphe
 
         int prochaineClef;
     private:
+    bool estPossibleDjikstra=true;
+
+
 
     /**
      * crée un sommet isolé.
@@ -116,6 +119,13 @@ class Graphe
     void effaceTout();
 
     public:
+    void setEstPossibleDjikstra(const bool val){
+        estPossibleDjikstra=val;
+    }
+
+    bool getEstPossibleDjikstra() const {
+        return estPossibleDjikstra;
+    }
 
     /**
      * crée un graphe vide

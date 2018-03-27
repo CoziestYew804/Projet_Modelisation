@@ -21,10 +21,12 @@ public:
     Graphe<VArete, VSommet> graphe;
     map<string, Sommet<VSommet>*> listeSommet; // map qui contient les sommet par leur nom
     vector<Sommet<VSommet> *> sommets;
+
     vector<Arete<VArete, VSommet> *> aretes;
     //map<string, Arete<VArete,VSommet>*> aretes; // map qui contient les arcs par leur nom
     int fichierLignes=1;
     std::pair < int, int> pSommet;
+
 
     board()
     {

@@ -18,9 +18,9 @@ public:
     {
         string choix1;
         string choix2;
-        cout << "Choisissez le numero du premier sommet: ";
+        cout << "Choisissez le numero du premier sommet (i+numero): ";
         cin >> choix1;
-        cout << endl <<"Choisissez le numero du deuxième sommet :";
+        cout << endl <<"Choisissez le numero du deuxième sommet (i+numero):";
         cin >> choix2;
         Sommet<VSommet> * resultat;
         Sommet<VSommet> * s1;
@@ -44,12 +44,19 @@ public:
                 OutilsCarte::cible = s2;
                 cout << "AStar ;" << endl;
                 resultat = Algos<Graphe<VArete, VSommet>, Sommet<VSommet> >::aStar(B.graphe, s1, OutilsCarte::hh);
+                if(!resultat) throw("Chemin astar non trouve");
+                PElement<Sommet<VSommet>> * c;
+                chemin(s2,c);
                 break;
             }
             case 2:
             {
+                OutilsCarte::cible = s2;
                 cout << "Dijkstra ;" << endl;
-                resultat = Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra( B.graphe, s2);
+                resultat = Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra( B.graphe, s1);
+                if(!resultat) throw("Chemin astar non trouve");
+                PElement<Sommet<VSommet>> * c;
+                chemin(s2,c);
                 break;
             }
             case 3:
@@ -59,23 +66,29 @@ public:
                 break;
             }
             case 4:
-                break;
-            case 5:
             {
                 cout << "Parcours DFS ;" << endl;
                 parcoursDFS(B.graphe, s1);
                 break;
             }
-            case 6:
+            case 5:
             {
                 cout << "Numérotation du graphe ;" << endl;
                 NumeroteGraphe(B.graphe,s1);
                 break;
             }
-            case 7:
+            case 6:
             {
                 cout << "Tri topologique ;" << endl;
-                PElement<Sommet<VSommet>> * Cheminresultat = TriTopologique(B.graphe,s1,s2);
+
+                vector<Sommet<VSommet>*> tri;
+                PElement<Sommet<VSommet>> *ls = B.graphe.lSommets;
+                while(ls!=NULL){
+                    tri.push_back(ls->valeur);
+                    ls=ls->suivant;
+                }
+                TriTopologique(B.graphe,tri,B.aretes);
+
                 break;
             }
 
@@ -96,11 +109,10 @@ public:
             cout << "1  - Astar entre deux sommets" << endl;
             cout << "2  - Dijkstra entre deux sommets" << endl;
             cout << "3  - Vérifier la connexité entre deux sommets" << endl;
-            cout << "4  - Colorier un chemin entre deux sommets" << endl;
-            cout << "5  - Parcours DFS " << endl;
-            cout << "6  - Numéroter les sommets" << endl;
-            cout << "7  - Tri topologique" << endl;
-            cout << "8  - Vérifie la présence de circuit" << endl;
+            cout << "4  - Parcours DFS " << endl;
+            cout << "5  - Numéroter les sommets" << endl;
+            cout << "6  - Tri topologique" << endl;
+            cout << "7  - Vérifie la présence de circuit" << endl;
 
             cout << endl << "\t\tMANIPULATION DE FICHIER" << endl << endl;
 
@@ -116,7 +128,7 @@ public:
             cout << "Votre choix : ";
             cin >> choix;
 
-            if (choix >= 1 && choix <= 8) {
+            if (choix >= 1 && choix <= 7) {
                 MenuAlgo(choix, B);
             } else {
                 switch (choix) {

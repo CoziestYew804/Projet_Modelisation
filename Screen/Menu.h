@@ -16,31 +16,33 @@ class Menu
 public:
     static void MenuAlgo(int arg, board &B)
     {
+        fflush(stdin);
         string choix1;
         string choix2;
-        cout << "Choisissez le numero du premier sommet (i+numero): ";
-        cin >> choix1;
-        cout << endl <<"Choisissez le numero du deuxième sommet (i+numero):";
-        cin >> choix2;
         Sommet<VSommet> * resultat;
         Sommet<VSommet> * s1;
         Sommet<VSommet> * s2;
-        if(choix1.empty() && choix2.empty())
-        {
 
-            s1 = B.sommets.front();
-            s2 = B.sommets.back();
-        }
-        else
-        {
-            s1 = B.listeSommet[choix1];
-            s2 = B.listeSommet[choix2];
-        }
 
         switch(arg)
         {
             case 1:
             {
+                cout << "Choisissez le premier sommet (i+numero): ";
+                cin >> choix1;
+                cout << endl <<"Choisissez le deuxième sommet (i+numero):"<<endl;
+                cin >> choix2;
+                if(choix1.empty() && choix2.empty())
+                {
+
+                    s1 = B.sommets.front();
+                    s2 = B.sommets.back();
+                }
+                else
+                {
+                    s1 = B.listeSommet[choix1];
+                    s2 = B.listeSommet[choix2];
+                }
                 OutilsCarte::cible = s2;
                 cout << "AStar ;" << endl;
                 resultat = Algos<Graphe<VArete, VSommet>, Sommet<VSommet> >::aStar(B.graphe, s1, OutilsCarte::hh);
@@ -50,7 +52,21 @@ public:
                 break;
             }
             case 2:
-            {
+            {   cout << "Choisissez le premier sommet (i+numero): ";
+                cin >> choix1;
+                cout << endl <<"Choisissez le deuxième sommet (i+numero):"<<endl;
+                cin >> choix2;
+                if(choix1.empty() && choix2.empty())
+                {
+
+                    s1 = B.sommets.front();
+                    s2 = B.sommets.back();
+                }
+                else
+                {
+                    s1 = B.listeSommet[choix1];
+                    s2 = B.listeSommet[choix2];
+                }
                 OutilsCarte::cible = s2;
                 cout << "Dijkstra ;" << endl;
                 resultat = Algos< Graphe<VArete,VSommet>,Sommet<VSommet> >::Djikstra( B.graphe, s1);
@@ -60,24 +76,48 @@ public:
                 break;
             }
             case 3:
-            {
+            {   cout << "Choisissez le premier sommet (i+numero): ";
+                cin >> choix1;
+                cout << endl <<"Choisissez le deuxième sommet (i+numero):"<<endl;
+                cin >> choix2;
+                if(choix1.empty() && choix2.empty())
+                {
+
+                    s1 = B.sommets.front();
+                    s2 = B.sommets.back();
+                }
+                else
+                {
+                    s1 = B.listeSommet[choix1];
+                    s2 = B.listeSommet[choix2];
+                }
                 OutilsCarte::cible = s2;
-                cout << "Connexité entre les deux sommets : " << ExisteUnChemin(B.graphe, s1, s2) << endl;
+                cout << "Les deux sommets sont ";
+                if(ExisteUnChemin(B.graphe, s1, s2))cout << "pas";
+                cout<<" connexes " << endl<<endl;
                 break;
             }
             case 4:
-            {
+            {   cout << "Choisissez le sommet de depart (i+numero): ";
+                cin >> choix1;
+                //cout << endl <<"Choisissez le numero du deuxième sommet (i+numero):"<<endl;
+                //cin >> choix2;
+                if(choix1.empty() && choix2.empty())
+                {
+
+                    s1 = B.sommets.front();
+                    //s2 = B.sommets.back();
+                }
+                else
+                {
+                    s1 = B.listeSommet[choix1];
+                    //s2 = B.listeSommet[choix2];
+                }
                 cout << "Parcours DFS ;" << endl;
                 parcoursDFS(B.graphe, s1);
                 break;
             }
             case 5:
-            {
-                cout << "Numérotation du graphe ;" << endl;
-                NumeroteGraphe(B.graphe,s1);
-                break;
-            }
-            case 6:
             {
                 cout << "Tri topologique ;" << endl;
                 if(!B.graphe.isCyclic()) {
@@ -90,9 +130,12 @@ public:
                     TriTopologique(B.graphe, tri, B.aretes);
                 }
                 else{
-                    cerr<< " le graphe a un cycle il n'est donc pas possible d'effectuer le tri topologique"<<endl;
+                    cerr<< " le graphe a un cycle il n'est donc pas possible d'effectuer le tri topologique"<<endl<<endl;
                 }
                 break;
+            }
+            case 6:{
+                B.graphe.isCyclic() ? cout << "Un cycle existe " << endl : cout << "Le graphe ne comporte pas de cycle" << endl;
             }
 
         }
@@ -102,7 +145,9 @@ public:
     static void MenuPrincipal(board &B)
     {
             int choix;
+        if(B.aretes.size()==0) {
             File::Read(B);
+        }
             cout << "Que voulez vous faire avec ce graphe ?" << endl;
 
 
@@ -113,26 +158,30 @@ public:
             cout << "2  - Dijkstra entre deux sommets" << endl;
             cout << "3  - Vérifier la connexité entre deux sommets" << endl;
             cout << "4  - Parcours DFS " << endl;
-            cout << "5  - Numéroter les sommets" << endl;
-            cout << "6  - Tri topologique" << endl;
-            cout << "7  - Vérifie la présence de circuit" << endl;
+            cout << "5  - Tri topologique" << endl;
+            cout << "6  - Vérifie la présence de Cycle" << endl;
 
             cout << endl << "\t\tMANIPULATION DE FICHIER" << endl << endl;
 
 
             cout << "9  - Sauvegarder le graphe " << endl;
-            cout << "10 - Charger un autre fichier gpr" << endl;
 
             cout << endl << "\t\tAUTRE" << endl << endl;
 
-            cout << "11 - Afficher le graphe" << endl;
-            cout << "0 - Quitter le logiciel" << endl << endl;
+            cout << "10 - Afficher le graphe" << endl;
+            cout << "0 - Quitter le logiciel" << endl<<endl;
 
             cout << "Votre choix : ";
             cin >> choix;
 
-            if (choix >= 1 && choix <= 7) {
+            if (choix >= 1 && choix <= 6) {
                 MenuAlgo(choix, B);
+                fflush(stdin);
+                cout<< "Appuyez sur entrer pour retourner au menu"<<endl;
+                while(getchar()!='\n');
+                getchar();
+                MenuPrincipal(B);
+
             } else {
                 switch (choix) {
                     case 0:
@@ -140,17 +189,15 @@ public:
                     case 9:
                     {
                         File::Save(B);
+                        MenuPrincipal(B);
                         break;
                     }
                     case 10:
-                    {
-                        File::Read(B);
-                        break;
-                    }
-                    case 11:
                         break;
                     default :
-                        cout << "Erreur de frappe !" << endl;
+                        cout << "Votre choix n'existe pas" << endl<<endl;
+                        MenuPrincipal(B);
+                        break;
                 }
             }
 

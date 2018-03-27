@@ -152,6 +152,7 @@ public:
         else
         {
             cerr << "Impossible d'ouvrir le fichier !" << endl;
+            exit(EXIT_SUCCESS);
         }
         ExtractionSommet(B.pSommet,input, B,fPuits);
         ExtractionArc(pArcs,input, B);
@@ -255,7 +256,10 @@ public:
                     if(stoi(subArray[6])<0){B.graphe.setEstPossibleDjikstra(false);}
                     //cout <<  stoi(subArray[2].substr(1))<<endl;
                     //cout << subArray[4].substr(1)<<endl;
-                    B.graphe.adj[stoi(subArray[2].substr(1))-1].push_back(stoi(subArray[4].substr(1))-1);
+                    int x ;
+                    if(x=(stoi(subArray[2].substr(1))-1)<0) x=0;
+
+                    B.graphe.adj[x].push_back(stoi(subArray[4].substr(1))-1);
                 }
                 ligne++;
             }
@@ -263,6 +267,7 @@ public:
         } else {
 
             cerr << "Impossible d'ouvrir le fichier !" << endl;
+
         }
     }
     static bool is_number( std::string s)

@@ -25,7 +25,7 @@ int main()
 // on l'active
 
     window.fenetre.setView(view);
-    B.graphe.dessine(window);
+    //B.graphe.dessine(window);
     //cout << B.graphe << endl;
     //cout << B.aretes[1] << endl;
 
@@ -37,9 +37,10 @@ int main()
     //cout << ch << endl;
     //window.dessineChemin(ch, B.graphe);
     //cout << B.graphe << endl;
-
-    window.fenetre.display();
     B.graphe.dessine(window);
+    window.dessineChemin(ch, B.graphe);
+    window.fenetre.display();
+
 
     while (window.fenetre.isOpen())
     {
